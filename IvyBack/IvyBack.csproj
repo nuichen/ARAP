@@ -1,0 +1,1246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3542960C-7E16-4FE1-ABA9-77318198B371}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IvyBack</RootNamespace>
+    <AssemblyName>IvyFMSStd400</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>秤平Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>FEF8EFD697E74BD4BA5E274A72AA92A8D1AB6A3B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>IvyBack_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=17.7.0.0, Culture=neutral, PublicKeyToken=9269011db29d841b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPinyin, Version=0.2.6803.28787, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\NPinyin.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=1.0.4727.18517, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.2.1.1\lib\net20\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForm\frmImageCut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmImageCut.designer.cs">
+      <DependentUpon>frmImageCut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\BankBLL.cs" />
+    <Compile Include="BLL\BranchBLL.cs" />
+    <Compile Include="BLL\CashierBLL.cs" />
+    <Compile Include="BLL\CashOrder.cs" />
+    <Compile Include="BLL\CheckBLL.cs" />
+    <Compile Include="BLL\CommonBLL.cs" />
+    <Compile Include="BLL\CusBLL.cs" />
+    <Compile Include="BLL\InOutBLL.cs" />
+    <Compile Include="BLL\ItemBLL.cs" />
+    <Compile Include="BLL\ItemClsBLL.cs" />
+    <Compile Include="BLL\MyDestop.cs" />
+    <Compile Include="BLL\OperBLL.cs" />
+    <Compile Include="BLL\PeopleBLL.cs" />
+    <Compile Include="BLL\ARAP_SCPaymentBLL.cs" />
+    <Compile Include="BLL\OnLine\Ad.cs" />
+    <Compile Include="BLL\OnLine\Advice.cs" />
+    <Compile Include="BLL\OnLine\Config.cs" />
+    <Compile Include="BLL\CusFY.cs" />
+    <Compile Include="BLL\CusSettle.cs" />
+    <Compile Include="BLL\OnLine\Customer.cs" />
+    <Compile Include="BLL\OnLine\Goods.cs" />
+    <Compile Include="BLL\OnLine\Order.cs" />
+    <Compile Include="BLL\SupBLL.cs" />
+    <Compile Include="BLL\SupcustGroupBLL.cs" />
+    <Compile Include="BLL\SysBLL.cs" />
+    <Compile Include="BLL\UpdateBLL.cs" />
+    <Compile Include="body\bi_t_sup_item.cs" />
+    <Compile Include="body\co_t_order_child_ex.cs" />
+    <Compile Include="body\co_t_order_main_ex.cs" />
+    <Compile Include="body\DayOfWeekContent.cs" />
+    <Compile Include="body\DayOfWeekContentWrapper.cs" />
+    <Compile Include="body\DaysOfContent.cs" />
+    <Compile Include="body\ItemPrice.cs" />
+    <Compile Include="body\Left.cs" />
+    <Compile Include="body\week_response.cs" />
+    <Compile Include="CashierForm\frmBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm\frmBank.designer.cs">
+      <DependentUpon>frmBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierForm\frmBankCashInitial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm\frmBankCashInitial.Designer.cs">
+      <DependentUpon>frmBankCashInitial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierForm\frmBankSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm\frmBankSelect.Designer.cs">
+      <DependentUpon>frmBankSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierForm\frmBankUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm\frmBankUpdate.designer.cs">
+      <DependentUpon>frmBankUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierForm\frmCashOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm\frmCashOrder.designer.cs">
+      <DependentUpon>frmCashOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierForm\frmCashOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm\frmCashOrderList.designer.cs">
+      <DependentUpon>frmCashOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierForm\frmCollectionPaySelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm\frmCollectionPaySelect.Designer.cs">
+      <DependentUpon>frmCollectionPaySelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierForm\frmCusCollectionPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm\frmCusCollectionPay.Designer.cs">
+      <DependentUpon>frmCusCollectionPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierForm\frmCusCollectionPayList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm\frmCusCollectionPayList.Designer.cs">
+      <DependentUpon>frmCusCollectionPayList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierForm\frmOtherIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm\frmOtherIncome.designer.cs">
+      <DependentUpon>frmOtherIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierForm\frmOtherIncomeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm\frmOtherIncomeList.designer.cs">
+      <DependentUpon>frmOtherIncomeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cons\editGrid_search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cons\editGrid_search.designer.cs">
+      <DependentUpon>editGrid_search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cons\MyTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cons\UC_ImageView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="cons\UC_ImageView.Designer.cs">
+      <DependentUpon>UC_ImageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceForm\frmIncomeRevenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceForm\frmIncomeRevenue.designer.cs">
+      <DependentUpon>frmIncomeRevenue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\ImageHelper.cs" />
+    <Compile Include="Helper\ListToDatatable.cs" />
+    <Compile Include="Helper\MsgHelper.cs" />
+    <Compile Include="Helper\ProcessHelper.cs" />
+    <Compile Include="Helper\TableToList.cs" />
+    <Compile Include="Helper\WeekPlanDraw.cs" />
+    <Compile Include="IBLL\IBank.cs" />
+    <Compile Include="IBLL\IARAP_SCPaymentBLL.cs" />
+    <Compile Include="IBLL\ICashierBLL.cs" />
+    <Compile Include="IBLL\ICashOrder.cs" />
+    <Compile Include="IBLL\OnLine\IAd.cs" />
+    <Compile Include="IBLL\OnLine\IAdvice.cs" />
+    <Compile Include="IBLL\OnLine\IConfig.cs" />
+    <Compile Include="IBLL\OnLine\ICustomer.cs" />
+    <Compile Include="IBLL\OnLine\IGoods.cs" />
+    <Compile Include="BLL\PrintBLL.cs" />
+    <Compile Include="BLL\RegionBLL.cs" />
+    <Compile Include="BLL\FinanceBLL.cs" />
+    <Compile Include="BLL\PaymentBLL.cs" />
+    <Compile Include="BLL\ReportBLL.cs" />
+    <Compile Include="BLL\SupFY.cs" />
+    <Compile Include="body\SheetCopy.cs" />
+    <Compile Include="cons\AddClickAct.cs" />
+    <Compile Include="cons\Calendar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cons\DataList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cons\DateTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cons\EditGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cons\MoveFormHelper.cs" />
+    <Compile Include="cons\MyButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cons\MyCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cons\DataGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cons\ModuleList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cons\MyIconButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cons\MyPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cons\MyRadio.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cons\MyText.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cons\ResourcesHelper.cs" />
+    <Compile Include="cons\ToolStripClick.cs" />
+    <Compile Include="cons\WindowsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helper\ClipboardHelper.cs" />
+    <Compile Include="Helper\ConvExtension.cs" />
+    <Compile Include="Helper\ExcelHelper.cs" />
+    <Compile Include="Helper\IvyException.cs" />
+    <Compile Include="Interfaces\IValueChanged.cs" />
+    <Compile Include="NavForm\frmNavCommon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NavForm\frmNavCommon.designer.cs">
+      <DependentUpon>frmNavCommon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavForm\frmNavPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NavForm\frmNavPayment.designer.cs">
+      <DependentUpon>frmNavPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmAgingGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmAgingGroup.designer.cs">
+      <DependentUpon>frmAgingGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmApToAp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmApToAp.designer.cs">
+      <DependentUpon>frmApToAp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmApToApList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmApToApList.designer.cs">
+      <DependentUpon>frmApToApList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmArToAp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmArToAp.designer.cs">
+      <DependentUpon>frmArToAp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmArToApList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmArToApList.designer.cs">
+      <DependentUpon>frmArToApList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmArToAr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmArToAr.designer.cs">
+      <DependentUpon>frmArToAr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmArToArList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmArToArList.designer.cs">
+      <DependentUpon>frmArToArList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmSheetTypeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmSheetTypeInfo.designer.cs">
+      <DependentUpon>frmSheetTypeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmNoticeSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmNoticeSelect.designer.cs">
+      <DependentUpon>frmNoticeSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmCollectionSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmCollectionSelect.designer.cs">
+      <DependentUpon>frmCollectionSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmCusCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmCusCollection.designer.cs">
+      <DependentUpon>frmCusCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmCusCollectionARAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmCusCollectionARAP.designer.cs">
+      <DependentUpon>frmCusCollectionARAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmCusCollectionARAPList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmCusCollectionARAPList.designer.cs">
+      <DependentUpon>frmCusCollectionARAPList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmCusCollectionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmCusCollectionList.designer.cs">
+      <DependentUpon>frmCusCollectionList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmCusReceivable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmCusReceivable.designer.cs">
+      <DependentUpon>frmCusReceivable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmCusReceivableList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmCusReceivableList.designer.cs">
+      <DependentUpon>frmCusReceivableList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmPaymentDetailed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmPaymentDetailed.designer.cs">
+      <DependentUpon>frmPaymentDetailed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmSupcustInitial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmSupcustInitial.designer.cs">
+      <DependentUpon>frmSupcustInitial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmSupcustNotice .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmSupcustNotice .designer.cs">
+      <DependentUpon>frmSupcustNotice .cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmSupcustNoticeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmSupcustNoticeList.designer.cs">
+      <DependentUpon>frmSupcustNoticeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmSupcustSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmSupcustSelect.designer.cs">
+      <DependentUpon>frmSupcustSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmSupPayable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmSupPayable.designer.cs">
+      <DependentUpon>frmSupPayable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm\frmSupPayableList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm\frmSupPayableList.designer.cs">
+      <DependentUpon>frmSupPayableList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmFinanceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helper\MyLove.cs" />
+    <Compile Include="Helper\RegistryHelper.cs" />
+    <Compile Include="Helper\sec.cs" />
+    <Compile Include="Helper\SoftUpdate.cs" />
+    <Compile Include="Helper\StringHelper.cs" />
+    <Compile Include="Helper\Win32.cs" />
+    <Compile Include="IBLL\ICheckBLL.cs" />
+    <Compile Include="IBLL\ICusFY.cs" />
+    <Compile Include="IBLL\ICusSettle.cs" />
+    <Compile Include="IBLL\IMyDestop.cs" />
+    <Compile Include="IBLL\IPrint.cs" />
+    <Compile Include="IBLL\IReport.cs" />
+    <Compile Include="IBLL\ISupcustGroup.cs" />
+    <Compile Include="IBLL\ISupFY.cs" />
+    <Compile Include="IBLL\IUpdate.cs" />
+    <Compile Include="IBLL\OnLine\IOrder.cs" />
+    <Compile Include="MainForm\ShowInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\ShowInfoForm.Designer.cs">
+      <DependentUpon>ShowInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmReportBLL.cs" />
+    <Compile Include="MainForm\YesNoSaveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\YesNoSaveForm.designer.cs">
+      <DependentUpon>YesNoSaveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\frmFindServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\frmFindServer.Designer.cs">
+      <DependentUpon>frmFindServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\frmLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\frmLoad.Designer.cs">
+      <DependentUpon>frmLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintForm\frmPrintAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintForm\frmPrintAdd.Designer.cs">
+      <DependentUpon>frmPrintAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintForm\frmPrintManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintForm\frmPrintManager.Designer.cs">
+      <DependentUpon>frmPrintManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintForm\PrintHelper.cs" />
+    <Compile Include="ReportForm\frmBaseReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmBaseReport.Designer.cs">
+      <DependentUpon>frmBaseReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceForm\frmIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceForm\frmIncome.Designer.cs">
+      <DependentUpon>frmIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceForm\frmIncomeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceForm\frmIncomeEdit.Designer.cs">
+      <DependentUpon>frmIncomeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceForm\frmPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceForm\frmPayment.Designer.cs">
+      <DependentUpon>frmPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceForm\frmPaymentUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceForm\frmPaymentUpdate.Designer.cs">
+      <DependentUpon>frmPaymentUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\InI.cs" />
+    <Compile Include="Helper\KeyPressJudge.cs" />
+    <Compile Include="Helper\Page.cs" />
+    <Compile Include="Helper\UBinder.cs" />
+    <Compile Include="IBLL\IInOutBLL.cs" />
+    <Compile Include="IBLL\IRegion.cs" />
+    <Compile Include="IBLL\IBranch.cs" />
+    <Compile Include="IBLL\ICommonBLL.cs" />
+    <Compile Include="IBLL\ICus.cs" />
+    <Compile Include="IBLL\IFinanceBLL.cs" />
+    <Compile Include="IBLL\IItem.cs" />
+    <Compile Include="IBLL\IItemCls.cs" />
+    <Compile Include="IBLL\IOper.cs" />
+    <Compile Include="IBLL\IPayment.cs" />
+    <Compile Include="IBLL\IPeople.cs" />
+    <Compile Include="IBLL\ISup.cs" />
+    <Compile Include="IBLL\ISys.cs" />
+    <Compile Include="MainForm\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavForm\frmNav.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NavForm\frmNav.Designer.cs">
+      <DependentUpon>frmNav.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\AppSetting.cs" />
+    <Compile Include="Helper\Conv.cs" />
+    <Compile Include="Helper\DrawHelper.cs" />
+    <Compile Include="Helper\GlobalData.cs" />
+    <Compile Include="Helper\LogHelper.cs" />
+    <Compile Include="Helper\MD5.cs" />
+    <Compile Include="Helper\ReadXml.cs" />
+    <Compile Include="Helper\JsonRequest.cs" />
+    <Compile Include="Helper\StringBuilderForXML.cs" />
+    <Compile Include="MainForm\MsgForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\MsgForm.designer.cs">
+      <DependentUpon>MsgForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\YesNoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\YesNoForm.designer.cs">
+      <DependentUpon>YesNoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helper\IRequest.cs" />
+    <Compile Include="Helper\Request.cs" />
+    <Compile Include="SysForm\frmChangeOperType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\frmChangeOperType.designer.cs">
+      <DependentUpon>frmChangeOperType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\frmOper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\frmOper.designer.cs">
+      <DependentUpon>frmOper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\frmOperGrant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\frmOperGrant.designer.cs">
+      <DependentUpon>frmOperGrant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\frmOperUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\frmOperUpdate.designer.cs">
+      <DependentUpon>frmOperUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\frmRegister.designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\frmRegisterList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\frmRegisterList.designer.cs">
+      <DependentUpon>frmRegisterList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\frmUpdatePwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\frmUpdatePwd.designer.cs">
+      <DependentUpon>frmUpdatePwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\market\AdEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\market\AdEdit.Designer.cs">
+      <DependentUpon>AdEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\market\AdList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\market\AdList.Designer.cs">
+      <DependentUpon>AdList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\market\AdviceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\market\AdviceList.Designer.cs">
+      <DependentUpon>AdviceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\market\AdviceReply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\market\AdviceReply.Designer.cs">
+      <DependentUpon>AdviceReply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\market\frmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\market\frmConfig.Designer.cs">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\market\frmDiv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\market\frmDiv.designer.cs">
+      <DependentUpon>frmDiv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\market\frmDownLoadQRCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\market\frmDownLoadQRCode.designer.cs">
+      <DependentUpon>frmDownLoadQRCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\market\MemberAdEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\market\MemberAdEdit.Designer.cs">
+      <DependentUpon>MemberAdEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\market\PCAdEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\market\PCAdEdit.Designer.cs">
+      <DependentUpon>PCAdEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\SysSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\SysSetting.designer.cs">
+      <DependentUpon>SysSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoucherForm\IOrder.cs" />
+    <Compile Include="VoucherForm\IOrderList.cs" />
+    <Compile Include="VoucherForm\IOrderMerge.cs" />
+    <Compile Include="VoucherForm\OrderMerge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoucherForm\OrderMerge.designer.cs">
+      <DependentUpon>OrderMerge.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaseForm\frmImageCut.resx">
+      <DependentUpon>frmImageCut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm\frmBank.resx">
+      <DependentUpon>frmBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm\frmBankCashInitial.resx">
+      <DependentUpon>frmBankCashInitial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm\frmBankSelect.resx">
+      <DependentUpon>frmBankSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm\frmBankUpdate.resx">
+      <DependentUpon>frmBankUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm\frmCashOrder.resx">
+      <DependentUpon>frmCashOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm\frmCashOrderList.resx">
+      <DependentUpon>frmCashOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm\frmCollectionPaySelect.resx">
+      <DependentUpon>frmCollectionPaySelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm\frmCusCollectionPay.resx">
+      <DependentUpon>frmCusCollectionPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm\frmCusCollectionPayList.resx">
+      <DependentUpon>frmCusCollectionPayList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm\frmOtherIncome.resx">
+      <DependentUpon>frmOtherIncome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm\frmOtherIncomeList.resx">
+      <DependentUpon>frmOtherIncomeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cons\Calendar.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cons\DataGrid.resx">
+      <DependentUpon>DataGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cons\DataList.resx">
+      <DependentUpon>DataList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cons\DateTextBox.resx">
+      <DependentUpon>DateTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cons\EditGrid.resx">
+      <DependentUpon>EditGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cons\editGrid_search.resx">
+      <DependentUpon>editGrid_search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cons\ModuleList.resx">
+      <DependentUpon>ModuleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cons\MyButton.resx">
+      <DependentUpon>MyButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cons\MyCheckBox.resx">
+      <DependentUpon>MyCheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cons\MyIconButton.resx">
+      <DependentUpon>MyIconButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cons\MyRadio.resx">
+      <DependentUpon>MyRadio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cons\MyTextBox.resx">
+      <DependentUpon>MyTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cons\UC_ImageView.resx">
+      <DependentUpon>UC_ImageView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cons\WindowsList.resx">
+      <DependentUpon>WindowsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceForm\frmIncomeRevenue.resx">
+      <DependentUpon>frmIncomeRevenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavForm\frmNavCommon.resx">
+      <DependentUpon>frmNavCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavForm\frmNavPayment.resx">
+      <DependentUpon>frmNavPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\ShowInfoForm.resx">
+      <DependentUpon>ShowInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmAgingGroup.resx">
+      <DependentUpon>frmAgingGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmApToAp.resx">
+      <DependentUpon>frmApToAp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmApToApList.resx">
+      <DependentUpon>frmApToApList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmArToAp.resx">
+      <DependentUpon>frmArToAp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmArToApList.resx">
+      <DependentUpon>frmArToApList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmArToAr.resx">
+      <DependentUpon>frmArToAr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmArToArList.resx">
+      <DependentUpon>frmArToArList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmSheetTypeInfo.resx">
+      <DependentUpon>frmSheetTypeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmNoticeSelect.resx">
+      <DependentUpon>frmNoticeSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmCollectionSelect.resx">
+      <DependentUpon>frmCollectionSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmCusCollection.resx">
+      <DependentUpon>frmCusCollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmCusCollectionARAP.resx">
+      <DependentUpon>frmCusCollectionARAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmCusCollectionARAPList.resx">
+      <DependentUpon>frmCusCollectionARAPList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmCusCollectionList.resx">
+      <DependentUpon>frmCusCollectionList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmCusReceivable.resx">
+      <DependentUpon>frmCusReceivable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmCusReceivableList.resx">
+      <DependentUpon>frmCusReceivableList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmPaymentDetailed.resx">
+      <DependentUpon>frmPaymentDetailed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmSupcustInitial.resx">
+      <DependentUpon>frmSupcustInitial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmSupcustNotice .resx">
+      <DependentUpon>frmSupcustNotice .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmSupcustNoticeList.resx">
+      <DependentUpon>frmSupcustNoticeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmSupcustSelect.resx">
+      <DependentUpon>frmSupcustSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmSupPayable.resx">
+      <DependentUpon>frmSupPayable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm\frmSupPayableList.resx">
+      <DependentUpon>frmSupPayableList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmFinanceReport.resx">
+      <DependentUpon>frmFinanceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\YesNoSaveForm.resx">
+      <DependentUpon>YesNoSaveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\frmFindServer.resx">
+      <DependentUpon>frmFindServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\frmLoad.resx">
+      <DependentUpon>frmLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintForm\frmPrintAdd.resx">
+      <DependentUpon>frmPrintAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintForm\frmPrintManager.resx">
+      <DependentUpon>frmPrintManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmBaseReport.resx">
+      <DependentUpon>frmBaseReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceForm\frmIncome.resx">
+      <DependentUpon>frmIncome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceForm\frmIncomeEdit.resx">
+      <DependentUpon>frmIncomeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceForm\frmPayment.resx">
+      <DependentUpon>frmPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceForm\frmPaymentUpdate.resx">
+      <DependentUpon>frmPaymentUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavForm\frmNav.resx">
+      <DependentUpon>frmNav.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\MsgForm.resx">
+      <DependentUpon>MsgForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\YesNoForm.resx">
+      <DependentUpon>YesNoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\frmChangeOperType.resx">
+      <DependentUpon>frmChangeOperType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\frmOper.resx">
+      <DependentUpon>frmOper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\frmOperGrant.resx">
+      <DependentUpon>frmOperGrant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\frmOperUpdate.resx">
+      <DependentUpon>frmOperUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\frmRegisterList.resx">
+      <DependentUpon>frmRegisterList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\frmUpdatePwd.resx">
+      <DependentUpon>frmUpdatePwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\market\AdEdit.resx">
+      <DependentUpon>AdEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\market\AdList.resx">
+      <DependentUpon>AdList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\market\AdviceList.resx">
+      <DependentUpon>AdviceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\market\AdviceReply.resx">
+      <DependentUpon>AdviceReply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\market\frmConfig.resx">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\market\frmDiv.resx">
+      <DependentUpon>frmDiv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\market\frmDownLoadQRCode.resx">
+      <DependentUpon>frmDownLoadQRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\market\MemberAdEdit.resx">
+      <DependentUpon>MemberAdEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\market\PCAdEdit.resx">
+      <DependentUpon>PCAdEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\SysSetting.resx">
+      <DependentUpon>SysSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoucherForm\OrderMerge.resx">
+      <DependentUpon>OrderMerge.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="lib\ExcelTemplate\菜谱档案导入模板.xlsx" />
+    <None Include="lib\ExcelTemplate\货商档案导入模板.xlsx" />
+    <None Include="lib\ExcelTemplate\客户档案导入模板.xlsx" />
+    <None Include="lib\ExcelTemplate\商品档案导入模板.xlsx" />
+    <None Include="lib\IVYGetValue.ini" />
+    <None Include="lib\IVYGetValue.map" />
+    <None Include="lib\IVYMain.ini" />
+    <None Include="lib\IVYTALK.ini" />
+    <None Include="lib\print\IVYTALK.ini" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DB\DB.csproj">
+      <Project>{4D1AFEFE-F0DE-41D9-A182-F04FE0A112BA}</Project>
+      <Name>DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{790481FE-EF64-446A-8E4A-16D63298F9B0}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrintHelper\PrintHelper.csproj">
+      <Project>{39395641-B54C-4881-8920-E7A71173A910}</Project>
+      <Name>PrintHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReadWriteContext\ReadWriteContext.csproj">
+      <Project>{620E5112-7D09-4C0C-AC13-88EFD46BA101}</Project>
+      <Name>ReadWriteContext</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="B2BForm\" />
+    <Folder Include="ComplaintForm\" />
+    <Folder Include="MobileOper\" />
+    <Folder Include="OrderForm\" />
+    <Folder Include="PriceForm\" />
+    <Folder Include="Processing\" />
+    <Folder Include="ProcurementForm\" />
+    <Folder Include="PurchaseFrom\" />
+    <Folder Include="SaleForm\" />
+    <Folder Include="StockForm\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="erp_logo.ico" />
+    <Content Include="lib\Aspose.Cells.dll" />
+    <Content Include="lib\IVYGetValue.dll" />
+    <Content Include="lib\IVYUpload.dll" />
+    <Content Include="lib\NPinyin.dll" />
+    <Content Include="lib\NPOI.dll" />
+    <Content Include="lib\print\NPOI.dll" />
+    <Content Include="lib\print\print.exe" />
+    <Content Include="lib\print\PrintHelper.dll" />
+    <Content Include="lib\print\print_style\01.xml" />
+    <Content Include="lib\print\print_style\PI2.xml" />
+    <Content Include="lib\print\zxing.dll" />
+    <Content Include="lib\zxing.dll" />
+    <None Include="Resources\cptx_logo.png" />
+    <None Include="Resources\Del.png" />
+    <None Include="Resources\dgv_add.png" />
+    <None Include="Resources\dgv_del.png" />
+    <None Include="Resources\dgv_insert.png" />
+    <None Include="Resources\disconnect.png" />
+    <None Include="Resources\flower.bmp" />
+    <None Include="Resources\forn.png" />
+    <None Include="Resources\LoadWait.gif" />
+    <None Include="Resources\login_login.png" />
+    <None Include="Resources\menu.png" />
+    <None Include="Resources\pnl_top_fill.png" />
+    <None Include="Resources\slogan2.png" />
+    <None Include="Resources\tool_exit.png" />
+    <None Include="Resources\tool_flush.png" />
+    <None Include="Resources\按钮-1.png" />
+    <None Include="Resources\按钮-2.png" />
+    <None Include="Resources\保存.png" />
+    <None Include="Resources\报表拉伸条.bmp" />
+    <None Include="Resources\报表图标前缀.png" />
+    <None Include="Resources\报表样式维护文字.png" />
+    <None Include="Resources\本周按钮-1.png" />
+    <None Include="Resources\本周按钮-2.png" />
+    <None Include="Resources\编辑.png" />
+    <None Include="Resources\标题.png" />
+    <None Include="Resources\左侧背景1.png" />
+    <None Include="Resources\查找服务器.gif" />
+    <None Include="Resources\秤评天下LOGO.png" />
+    <None Include="Resources\秤评天下LOGO2.png" />
+    <None Include="Resources\出纳_未选中.png" />
+    <None Include="Resources\出纳_选中.png" />
+    <None Include="Resources\初始化01.png" />
+    <None Include="Resources\垂直_滚动条.png" />
+    <None Include="Resources\垂直_中间.png" />
+    <None Include="Resources\此logo只用在主界面.png" />
+    <None Include="Resources\打印.png" />
+    <None Include="Resources\单据Tab1.png" />
+    <None Include="Resources\单据Tab2.png" />
+    <None Include="Resources\导出.png" />
+    <None Include="Resources\导航_出纳管理_1.png" />
+    <None Include="Resources\导航_出纳管理_2.png" />
+    <None Include="Resources\导航_应收应付_1.png" />
+    <None Include="Resources\导航_应收应付_2.png" />
+    <None Include="Resources\导航栏关闭2.png" />
+    <None Include="Resources\导航栏为选中.png" />
+    <None Include="Resources\导航栏未选中1.png" />
+    <None Include="Resources\导航栏选中2.png" />
+    <None Include="Resources\导航2 背景11.png" />
+    <None Include="Resources\导入.png" />
+    <None Include="Resources\登录背景.png" />
+    <None Include="Resources\顶部.png" />
+    <None Include="Resources\顶部拉伸条.png" />
+    <None Include="Resources\顶部右侧.png" />
+    <None Include="Resources\顶部右侧2.png" />
+    <None Include="Resources\顶部左侧.png" />
+    <None Include="Resources\反审.png" />
+    <None Include="Resources\工具栏_保存.png" />
+    <None Include="Resources\工具栏_关闭01.png" />
+    <None Include="Resources\工具栏_全不选.png" />
+    <None Include="Resources\工具栏_全部展开折叠01.png" />
+    <None Include="Resources\工具栏_全选.png" />
+    <None Include="Resources\工具栏_删除01.png" />
+    <None Include="Resources\工具栏_删除组.png" />
+    <None Include="Resources\工具栏_首页按钮1.png" />
+    <None Include="Resources\工具栏_授权.png" />
+    <None Include="Resources\工具栏_新建01.png" />
+    <None Include="Resources\工具栏_新建组.png" />
+    <None Include="Resources\工具栏_新增同级01.png" />
+    <None Include="Resources\工具栏_修改01.png" />
+    <None Include="Resources\工具栏_修改组.png" />
+    <None Include="Resources\工具栏背景.bmp" />
+    <None Include="Resources\功能按钮.png" />
+    <None Include="Resources\购物车.png" />
+    <None Include="Resources\关闭.png" />
+    <None Include="Resources\滚动条.png" />
+    <None Include="Resources\滚动条1.png" />
+    <None Include="Resources\右.png" />
+    <None Include="Resources\中间.png" />
+    <None Include="Resources\左.png" />
+    <None Include="Resources\结转.png" />
+    <None Include="Resources\警铃.png" />
+    <None Include="Resources\删除.png" />
+    <None Include="Resources\上.png" />
+    <None Include="Resources\审核.png" />
+    <None Include="Resources\生鲜食材配送管理系统.png" />
+    <None Include="Resources\首页按钮1.png" />
+    <None Include="Resources\首页图标背景.png" />
+    <None Include="Resources\刷新.png" />
+    <None Include="Resources\退出.png" />
+    <None Include="Resources\系统参数背景.png" />
+    <None Include="Resources\系统设置参数.png" />
+    <None Include="Resources\下.png" />
+    <None Include="Resources\新建.png" />
+    <None Include="Resources\修改密码.jpg" />
+    <None Include="Resources\颜色.bmp" />
+    <None Include="Resources\意马争鲜logo2.png" />
+    <None Include="Resources\右1.png" />
+    <None Include="Resources\右箭头.png" />
+    <None Include="Resources\圆圈.png" />
+    <None Include="Resources\中间1.png" />
+    <None Include="Resources\左1.png" />
+    <None Include="Resources\应收应付-未选中.png" />
+    <None Include="Resources\应收应付-选中.png" />
+    <None Include="Resources\erp_main -2.png" />
+    <None Include="Resources\new_绑定.png" />
+    <None Include="Resources\new_保存.png" />
+    <None Include="Resources\new_菜单.png" />
+    <None Include="Resources\new_查询.png" />
+    <None Include="Resources\new_拆分.png" />
+    <None Include="Resources\new_撤销.png" />
+    <None Include="Resources\new_冲销.png" />
+    <None Include="Resources\new_打印.png" />
+    <None Include="Resources\new_导出.png" />
+    <None Include="Resources\new_导航.png" />
+    <None Include="Resources\new_导入.png" />
+    <None Include="Resources\new_反审.png" />
+    <None Include="Resources\new_分类质检.png" />
+    <None Include="Resources\new_复制.png" />
+    <None Include="Resources\new_供应商绑定.png" />
+    <None Include="Resources\new_供应商等级.png" />
+    <None Include="Resources\new_挂起.png" />
+    <None Include="Resources\new_合并.png" />
+    <None Include="Resources\new_结转.png" />
+    <None Include="Resources\new_禁用.png" />
+    <None Include="Resources\new_农残质检.png" />
+    <None Include="Resources\new_批量修改.png" />
+    <None Include="Resources\new_启用.png" />
+    <None Include="Resources\new_弃审.png" />
+    <None Include="Resources\new_全部展开.png" />
+    <None Include="Resources\new_删除.png" />
+    <None Include="Resources\new_删除组.png" />
+    <None Include="Resources\new_审核.png" />
+    <None Include="Resources\new_收付款.png" />
+    <None Include="Resources\new_刷新.png" />
+    <None Include="Resources\new_添加凭证.png" />
+    <None Include="Resources\new_统筹.png" />
+    <None Include="Resources\new_退出.png" />
+    <None Include="Resources\new_完成.png" />
+    <None Include="Resources\new_下推.png" />
+    <None Include="Resources\new_新建组.png" />
+    <None Include="Resources\new_新增.png" />
+    <None Include="Resources\new_新增下级.png" />
+    <None Include="Resources\new_修改.png" />
+    <None Include="Resources\new_修改组.png" />
+    <None Include="Resources\new_应收应付.png" />
+    <None Include="Resources\new_预览.png" />
+    <None Include="Resources\new_运算.png" />
+    <None Include="Resources\new_折叠.png" />
+    <None Include="Resources\new_质检.png" />
+    <None Include="Resources\new_作废.png" />
+    <None Include="Resources\小标题.png" />
+    <Content Include="秤平Icon.ico" />
+    <Content Include="数据库升级.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="版本更新说明.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

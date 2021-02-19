@@ -1,0 +1,683 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{19C03671-BC37-495D-8AEC-095511C4C9F2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>b2bclient</RootNamespace>
+    <AssemblyName>b2bclient</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\AxInterop.WMPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ChnCharInfo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=18f031bd02e5e291, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\ChnCharInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>libs\Interop.WMPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=1.0.3824.27643, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\Ad.cs" />
+    <Compile Include="BLL\Advice.cs" />
+    <Compile Include="BLL\Config.cs" />
+    <Compile Include="BLL\Customer.cs" />
+    <Compile Include="BLL\Goods.cs" />
+    <Compile Include="BLL\GoodsCls.cs" />
+    <Compile Include="BLL\IAd.cs" />
+    <Compile Include="BLL\IAdvice.cs" />
+    <Compile Include="BLL\IConfig.cs" />
+    <Compile Include="BLL\ICustomer.cs" />
+    <Compile Include="BLL\IGoods.cs" />
+    <Compile Include="BLL\IGoodsCls.cs" />
+    <Compile Include="BLL\IOper.cs" />
+    <Compile Include="BLL\IOrder.cs" />
+    <Compile Include="BLL\IPager.cs" />
+    <Compile Include="BLL\IRep付款方式汇总表.cs" />
+    <Compile Include="BLL\IRep单品汇总表.cs" />
+    <Compile Include="BLL\IRep失效订单明细.cs" />
+    <Compile Include="BLL\IRep时段汇总表.cs" />
+    <Compile Include="BLL\IRep销售日报表.cs" />
+    <Compile Include="BLL\IRep销售明细.cs" />
+    <Compile Include="BLL\IRep销售汇总表.cs" />
+    <Compile Include="BLL\IRep顾客汇总表.cs" />
+    <Compile Include="BLL\IWXPaySetting.cs" />
+    <Compile Include="BLL\Oper.cs" />
+    <Compile Include="BLL\Order.cs" />
+    <Compile Include="BLL\Pager.cs" />
+    <Compile Include="BLL\Rep付款方式汇总表.cs" />
+    <Compile Include="BLL\Rep单品汇总表.cs" />
+    <Compile Include="BLL\Rep失效订单明细.cs" />
+    <Compile Include="BLL\Rep时段汇总表.cs" />
+    <Compile Include="BLL\Rep销售日报表.cs" />
+    <Compile Include="BLL\Rep销售明细.cs" />
+    <Compile Include="BLL\Rep销售汇总表.cs" />
+    <Compile Include="BLL\Rep顾客汇总表.cs" />
+    <Compile Include="BLL\WXPaySetting.cs" />
+    <Compile Include="body\customer.cs" />
+    <Compile Include="body\discount.cs" />
+    <Compile Include="body\goods_cls.cs" />
+    <Compile Include="body\key_value.cs" />
+    <Compile Include="body\Oper.cs" />
+    <Compile Include="body\salesman.cs" />
+    <Compile Include="body\theme.cs" />
+    <Compile Include="body\vip_pcash.cs" />
+    <Compile Include="body\wait_print.cs" />
+    <Compile Include="body\wm_order.cs" />
+    <Compile Include="body\wm_order_item.cs" />
+    <Compile Include="control\ankey.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\ankey.Designer.cs">
+      <DependentUpon>ankey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\ClickActive.cs" />
+    <Compile Include="control\DataGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="control\DataGridViewStyle.cs" />
+    <Compile Include="control\FormEsc.cs" />
+    <Compile Include="control\GoodsClass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\GoodsClass.Designer.cs">
+      <DependentUpon>GoodsClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\MoveHelper.cs" />
+    <Compile Include="control\MyPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="control\NewCusMsg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\NewCusMsg.Designer.cs">
+      <DependentUpon>NewCusMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\NewOrderMsg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\NewOrderMsg.Designer.cs">
+      <DependentUpon>NewOrderMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\OrderLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\OrderLine.Designer.cs">
+      <DependentUpon>OrderLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\Roll.cs" />
+    <Compile Include="control\TextboxEnterKey.cs" />
+    <Compile Include="customer\frmAddCus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customer\frmAddCus.Designer.cs">
+      <DependentUpon>frmAddCus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customer\frmCusEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customer\frmCusEdit.Designer.cs">
+      <DependentUpon>frmCusEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customer\frmCusHand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customer\frmCusHand.Designer.cs">
+      <DependentUpon>frmCusHand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customer\frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customer\frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="goods\ChooseItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="goods\ChooseItem.Designer.cs">
+      <DependentUpon>ChooseItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="goods\Deleg.cs" />
+    <Compile Include="goods\frmGoodsChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="goods\frmGoodsChange.Designer.cs">
+      <DependentUpon>frmGoodsChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="goods\frmGoodsClsChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="goods\frmGoodsClsChange.Designer.cs">
+      <DependentUpon>frmGoodsClsChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="goods\frmGoodsMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="goods\frmGoodsMenu.Designer.cs">
+      <DependentUpon>frmGoodsMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="goods\frmImageCut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="goods\frmImageCut.Designer.cs">
+      <DependentUpon>frmImageCut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="goods\GoodsCls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="goods\GoodsCls.Designer.cs">
+      <DependentUpon>GoodsCls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="goods\GoodsClsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="goods\GoodsClsList.Designer.cs">
+      <DependentUpon>GoodsClsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="goods\GoodsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="goods\GoodsList.Designer.cs">
+      <DependentUpon>GoodsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="goods\goods上传图片.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="goods\goods上传图片.Designer.cs">
+      <DependentUpon>goods上传图片.cs</DependentUpon>
+    </Compile>
+    <Compile Include="goods\goods基础信息设置.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="goods\goods基础信息设置.Designer.cs">
+      <DependentUpon>goods基础信息设置.cs</DependentUpon>
+    </Compile>
+    <Compile Include="goods\goods属性组定义.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="goods\goods属性组定义.Designer.cs">
+      <DependentUpon>goods属性组定义.cs</DependentUpon>
+    </Compile>
+    <Compile Include="goods\Item.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="goods\Item.Designer.cs">
+      <DependentUpon>Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="goods\SetGroupCls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="goods\SetGroupCls.Designer.cs">
+      <DependentUpon>SetGroupCls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="goods\waiting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="goods\waiting.Designer.cs">
+      <DependentUpon>waiting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\aes.cs" />
+    <Compile Include="Helper\AppSetting.cs" />
+    <Compile Include="Helper\Conv.cs" />
+    <Compile Include="Helper\GlobalData.cs" />
+    <Compile Include="Helper\ImageHelper.cs" />
+    <Compile Include="Helper\IRequest.cs" />
+    <Compile Include="Helper\LogHelper.cs" />
+    <Compile Include="Helper\MD5.cs" />
+    <Compile Include="Helper\Par.cs" />
+    <Compile Include="Helper\Par_aes.cs" />
+    <Compile Include="Helper\ReadXml.cs" />
+    <Compile Include="Helper\Request.cs" />
+    <Compile Include="Helper\sec.cs" />
+    <Compile Include="Helper\Security.cs" />
+    <Compile Include="Helper\StringBuilderForXML.cs" />
+    <Compile Include="Helper\ToExcel.cs" />
+    <Compile Include="market\AdEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="market\AdEdit.Designer.cs">
+      <DependentUpon>AdEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="market\AdList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="market\AdList.Designer.cs">
+      <DependentUpon>AdList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="market\AdviceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="market\AdviceList.Designer.cs">
+      <DependentUpon>AdviceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="market\AdviceReply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="market\AdviceReply.Designer.cs">
+      <DependentUpon>AdviceReply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="market\frmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="market\frmConfig.Designer.cs">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="market\frmMarketMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="market\frmMarketMenu.Designer.cs">
+      <DependentUpon>frmMarketMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="market\MemberAdEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="market\MemberAdEdit.Designer.cs">
+      <DependentUpon>MemberAdEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="market\PCAdEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="market\PCAdEdit.Designer.cs">
+      <DependentUpon>PCAdEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="order\frmOrderMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="order\frmOrderMenu.Designer.cs">
+      <DependentUpon>frmOrderMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="order\order_all.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="order\order_all.Designer.cs">
+      <DependentUpon>order_all.cs</DependentUpon>
+    </Compile>
+    <Compile Include="order\order_disable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="order\order_disable.Designer.cs">
+      <DependentUpon>order_disable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="order\order_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="order\order_new.Designer.cs">
+      <DependentUpon>order_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="order\order_pass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="order\order_pass.Designer.cs">
+      <DependentUpon>order_pass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\frmDiv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Page\frmDiv.Designer.cs">
+      <DependentUpon>frmDiv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\frmDownLoadQRCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Page\frmDownLoadQRCode.Designer.cs">
+      <DependentUpon>frmDownLoadQRCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\frmHand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Page\frmHand.Designer.cs">
+      <DependentUpon>frmHand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\frmIcon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Page\frmIcon.Designer.cs">
+      <DependentUpon>frmIcon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Page\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Page\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\frmMinExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Page\frmMinExit.Designer.cs">
+      <DependentUpon>frmMinExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\frmTop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Page\frmTop.Designer.cs">
+      <DependentUpon>frmTop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\MainPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\MainPanel.Designer.cs">
+      <DependentUpon>MainPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlaySound\IPlaySound.cs" />
+    <Compile Include="PlaySound\PlaySound.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="report\frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\Rep单品汇总表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\Rep单品汇总表.Designer.cs">
+      <DependentUpon>Rep单品汇总表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\Rep客户对账表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\Rep客户对账表.Designer.cs">
+      <DependentUpon>Rep客户对账表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\Rep销售日报表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\Rep销售日报表.Designer.cs">
+      <DependentUpon>Rep销售日报表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\Rep销售明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\Rep销售明细.Designer.cs">
+      <DependentUpon>Rep销售明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\Rep销售汇总表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\Rep销售汇总表.Designer.cs">
+      <DependentUpon>Rep销售汇总表.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="libs\AxInterop.WMPLib.dll" />
+    <Content Include="libs\ChnCharInfo.dll" />
+    <Content Include="libs\DB.dll" />
+    <Content Include="libs\Interop.WMPLib.dll" />
+    <Content Include="libs\Model.dll" />
+    <Content Include="libs\Newtonsoft.Json.dll" />
+    <Content Include="libs\NPOI.dll" />
+    <Content Include="libs\System.Data.SQLite.dll" />
+    <Content Include="libs\zxing.dll" />
+    <Content Include="Resources\logo1.png" />
+    <Content Include="Resources\logo2.png" />
+    <Content Include="Resources\logo3.png" />
+    <Content Include="Resources\qrcode.png" />
+    <Content Include="Resources\sys_name.png" />
+    <Content Include="Resources\sys_name1.png" />
+    <Content Include="Resources\sys_name2.png" />
+    <Content Include="Resources\weight_01.png" />
+    <Content Include="Resources\_11_04.png" />
+    <Content Include="Resources\_11_09.png" />
+    <Content Include="Resources\上.png" />
+    <Content Include="Resources\下.png" />
+    <Content Include="Resources\功能按钮.png" />
+    <Content Include="Resources\垂直_中间.png" />
+    <Content Include="Resources\垂直_滚动条.png" />
+    <Content Include="Resources\按钮-1.png" />
+    <Content Include="Resources\按钮-2.png" />
+    <Content Include="Resources\滚动条_中间.png" />
+    <Content Include="Resources\滚动条_右.png" />
+    <Content Include="Resources\滚动条_左.png" />
+    <Content Include="Resources\滚动条_滚动条.png" />
+    <Content Include="Resources\菜单-1-1.png" />
+    <Content Include="Resources\菜单-1-2.png" />
+    <Content Include="Resources\菜单-2-1.png" />
+    <Content Include="Resources\菜单-2-2.png" />
+    <Content Include="Resources\菜单-3-1.png" />
+    <Content Include="Resources\菜单-3-2.png" />
+    <Content Include="Resources\菜单-4-1.png" />
+    <Content Include="Resources\菜单-4-2.png" />
+    <Content Include="Resources\菜单-5-1.png" />
+    <Content Include="Resources\菜单-5-2.png" />
+    <Content Include="Resources\菜单-6-1.png" />
+    <Content Include="Resources\菜单-6-2.png" />
+    <Content Include="Resources\菜单栏.png" />
+    <Content Include="Resources\顶部右侧2.png" />
+    <Content Include="Resources\顶部拉伸条.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="control\ankey.resx">
+      <DependentUpon>ankey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\DataGrid.resx">
+      <DependentUpon>DataGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\GoodsClass.resx">
+      <DependentUpon>GoodsClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\NewCusMsg.resx">
+      <DependentUpon>NewCusMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\NewOrderMsg.resx">
+      <DependentUpon>NewOrderMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\OrderLine.resx">
+      <DependentUpon>OrderLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer\frmAddCus.resx">
+      <DependentUpon>frmAddCus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer\frmCusEdit.resx">
+      <DependentUpon>frmCusEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer\frmCusHand.resx">
+      <DependentUpon>frmCusHand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer\frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="goods\ChooseItem.resx">
+      <DependentUpon>ChooseItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="goods\frmGoodsChange.resx">
+      <DependentUpon>frmGoodsChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="goods\frmGoodsClsChange.resx">
+      <DependentUpon>frmGoodsClsChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="goods\frmGoodsMenu.resx">
+      <DependentUpon>frmGoodsMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="goods\frmImageCut.resx">
+      <DependentUpon>frmImageCut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="goods\GoodsCls.resx">
+      <DependentUpon>GoodsCls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="goods\GoodsClsList.resx">
+      <DependentUpon>GoodsClsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="goods\GoodsList.resx">
+      <DependentUpon>GoodsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="goods\goods上传图片.resx">
+      <DependentUpon>goods上传图片.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="goods\goods基础信息设置.resx">
+      <DependentUpon>goods基础信息设置.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="goods\goods属性组定义.resx">
+      <DependentUpon>goods属性组定义.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="goods\Item.resx">
+      <DependentUpon>Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="goods\SetGroupCls.resx">
+      <DependentUpon>SetGroupCls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="goods\waiting.resx">
+      <DependentUpon>waiting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="market\AdEdit.resx">
+      <DependentUpon>AdEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="market\AdList.resx">
+      <DependentUpon>AdList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="market\AdviceList.resx">
+      <DependentUpon>AdviceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="market\AdviceReply.resx">
+      <DependentUpon>AdviceReply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="market\frmConfig.resx">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="market\frmMarketMenu.resx">
+      <DependentUpon>frmMarketMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="market\MemberAdEdit.resx">
+      <DependentUpon>MemberAdEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="market\PCAdEdit.resx">
+      <DependentUpon>PCAdEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="order\frmOrderMenu.resx">
+      <DependentUpon>frmOrderMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="order\order_all.resx">
+      <DependentUpon>order_all.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="order\order_disable.resx">
+      <DependentUpon>order_disable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="order\order_new.resx">
+      <DependentUpon>order_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="order\order_pass.resx">
+      <DependentUpon>order_pass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\frmDiv.resx">
+      <DependentUpon>frmDiv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\frmDownLoadQRCode.resx">
+      <DependentUpon>frmDownLoadQRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\frmHand.resx">
+      <DependentUpon>frmHand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\frmIcon.resx">
+      <DependentUpon>frmIcon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\frmMinExit.resx">
+      <DependentUpon>frmMinExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\frmTop.resx">
+      <DependentUpon>frmTop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\MainPanel.resx">
+      <DependentUpon>MainPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\Rep单品汇总表.resx">
+      <DependentUpon>Rep单品汇总表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\Rep客户对账表.resx">
+      <DependentUpon>Rep客户对账表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\Rep销售日报表.resx">
+      <DependentUpon>Rep销售日报表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\Rep销售明细.resx">
+      <DependentUpon>Rep销售明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\Rep销售汇总表.resx">
+      <DependentUpon>Rep销售汇总表.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DB\DB.csproj">
+      <Project>{4d1afefe-f0de-41d9-a182-f04fe0a112ba}</Project>
+      <Name>DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{790481fe-ef64-446a-8e4a-16d63298f9b0}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReadWriteContext\ReadWriteContext.csproj">
+      <Project>{620e5112-7d09-4c0c-ac13-88efd46ba101}</Project>
+      <Name>ReadWriteContext</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

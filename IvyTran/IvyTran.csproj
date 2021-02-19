@@ -1,0 +1,435 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4DF1E96F-FB6E-45CA-9B00-E52BDE7800D1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IvyTran</RootNamespace>
+    <AssemblyName>IvyTran</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AopSdk">
+      <HintPath>libs\AopSdk.dll</HintPath>
+    </Reference>
+    <Reference Include="DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="F2FPayDll">
+      <HintPath>libs\F2FPayDll.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPinyin, Version=0.2.6803.28787, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\NPinyin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="index.html" />
+    <Content Include="libs\DAL.dll" />
+    <Content Include="libs\DALmsg.dll" />
+    <Content Include="libs\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="libs\NPinyin.dll" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alipay\AliPay.cs" />
+    <Compile Include="Alipay\Config.cs" />
+    <Compile Include="Alipay\MicroPay.cs" />
+    <Compile Include="AppSetting.cs" />
+    <Compile Include="BLL\API\AssApiBLL.cs" />
+    <Compile Include="BLL\API\OperBLL.cs" />
+    <Compile Include="BLL\ERP\Bank.cs" />
+    <Compile Include="BLL\ERP\BatchProcessing.cs" />
+    <Compile Include="BLL\ERP\BomBll.cs" />
+    <Compile Include="BLL\ERP\CashierBLL.cs" />
+    <Compile Include="BLL\ERP\ComplaintBLL.cs" />
+    <Compile Include="BLL\ERP\CookbookBll.cs" />
+    <Compile Include="BLL\ERP\ARAP_SCPaymentBLL.cs" />
+    <Compile Include="BLL\ERP\MobileBLL.cs" />
+    <Compile Include="BLL\ERP\ModifyCSPriceBLL.cs" />
+    <Compile Include="BLL\ERP\MrpBLL.cs" />
+    <Compile Include="BLL\ERP\RecipeMenuBll.cs" />
+    <Compile Include="BLL\ERP\SupOffer.cs" />
+    <Compile Include="BLL\ERP\SysLogBLL.cs" />
+    <Compile Include="BLL\OnLine\Ad.cs" />
+    <Compile Include="BLL\OnLine\Advice.cs" />
+    <Compile Include="BLL\ERP\Branch.cs" />
+    <Compile Include="BLL\ERP\CashOrder.cs" />
+    <Compile Include="BLL\ERP\CheckBLL.cs" />
+    <Compile Include="BLL\ERP\CheckSheet.cs" />
+    <Compile Include="BLL\ERP\Common.cs" />
+    <Compile Include="BLL\ERP\ComputeCost.cs" />
+    <Compile Include="BLL\OnLine\Config.cs" />
+    <Compile Include="BLL\ERP\CountDetail.cs" />
+    <Compile Include="BLL\ERP\Cus.cs" />
+    <Compile Include="BLL\ERP\CusFY.cs" />
+    <Compile Include="BLL\ERP\CusPriceOrder.cs" />
+    <Compile Include="BLL\ERP\CusSettle.cs" />
+    <Compile Include="BLL\ERP\Dep.cs" />
+    <Compile Include="BLL\ERP\FinanceBLL.cs" />
+    <Compile Include="BLL\ERP\FYOrder.cs" />
+    <Compile Include="BLL\OnLine\Customer.cs" />
+    <Compile Include="BLL\OnLine\Goods.cs" />
+    <Compile Include="BLL\OnLine\ImageClient.cs" />
+    <Compile Include="BLL\ERP\InOutBLL.cs" />
+    <Compile Include="BLL\Inventory\CheckBakBll.cs" />
+    <Compile Include="BLL\Inventory\CheckDetail.cs" />
+    <Compile Include="BLL\Inventory\Goods.cs" />
+    <Compile Include="BLL\Inventory\Oper.cs" />
+    <Compile Include="BLL\ERP\Item.cs" />
+    <Compile Include="BLL\ERP\ItemCls.cs" />
+    <Compile Include="BLL\ERP\MyDestop.cs" />
+    <Compile Include="BLL\ERP\Oper.cs" />
+    <Compile Include="BLL\ERP\Order.cs" />
+    <Compile Include="BLL\ERP\PayBLL.cs" />
+    <Compile Include="BLL\ERP\Payment.cs" />
+    <Compile Include="BLL\ERP\PayNotify.cs" />
+    <Compile Include="BLL\ERP\People.cs" />
+    <Compile Include="BLL\ERP\PFPrice.cs" />
+    <Compile Include="BLL\ERP\PriceBLL.cs" />
+    <Compile Include="BLL\ERP\PrintBLL.cs" />
+    <Compile Include="BLL\ERP\Region.cs" />
+    <Compile Include="BLL\ERP\Report.cs" />
+    <Compile Include="BLL\ERP\SaleOrder.cs" />
+    <Compile Include="BLL\ERP\Sup.cs" />
+    <Compile Include="BLL\ERP\SupcustGroupBLL.cs" />
+    <Compile Include="BLL\ERP\SupFY.cs" />
+    <Compile Include="BLL\ERP\SupSettle.cs" />
+    <Compile Include="BLL\ERP\Sys.cs" />
+    <Compile Include="BLL\ERP\SysBLL.cs" />
+    <Compile Include="BLL\ERP\UpdateBLL.cs" />
+    <Compile Include="BLL\ERP\Weight.cs" />
+    <Compile Include="BLL\OnLine\Message.cs" />
+    <Compile Include="BLL\OnLine\message_sale_demo.cs" />
+    <Compile Include="BLL\OnLine\Order.cs" />
+    <Compile Include="BLL\OnLine\Pager.cs" />
+    <Compile Include="BLL\OnLine\SmsService.cs" />
+    <Compile Include="BLL\ProcessingScale\ProcessBLL.cs" />
+    <Compile Include="body\alimicrocancel_par.cs" />
+    <Compile Include="body\alimicrocancel_res.cs" />
+    <Compile Include="body\alimicropay_par.cs" />
+    <Compile Include="body\alimicropay_res.cs" />
+    <Compile Include="body\alimicroquery_par.cs" />
+    <Compile Include="body\alimicroquery_res.cs" />
+    <Compile Include="body\alipay.cs" />
+    <Compile Include="body\bi_t_cust_price_history.cs" />
+    <Compile Include="body\bi_t_supcust_info.cs" />
+    <Compile Include="body\bi_t_sup_item_history.cs" />
+    <Compile Include="body\co_t_order_child.cs" />
+    <Compile Include="body\co_t_order_main.cs" />
+    <Compile Include="body\ic_t_inoutstore_recpay_detail.cs" />
+    <Compile Include="body\ic_t_inoutstore_recpay_main.cs" />
+    <Compile Include="body\ic_t_inout_store_detail.cs" />
+    <Compile Include="body\ic_t_inout_store_master.cs" />
+    <Compile Include="body\Inventory\pda_bi_t_item_barcode.cs" />
+    <Compile Include="body\Inventory\pda_bi_t_item_info.cs" />
+    <Compile Include="body\Inventory\pda_bi_t_item_pack_detail.cs" />
+    <Compile Include="body\Inventory\pda_ot_t_check_detail.cs" />
+    <Compile Include="body\Inventory\pda_st_t_oper_info.cs" />
+    <Compile Include="body\item.cs" />
+    <Compile Include="body\merchant.cs" />
+    <Compile Include="body\message_pars.cs" />
+    <Compile Include="body\microcancel_par.cs" />
+    <Compile Include="body\microcancel_res.cs" />
+    <Compile Include="body\micropay_par.cs" />
+    <Compile Include="body\micropay_res.cs" />
+    <Compile Include="body\microquery_par.cs" />
+    <Compile Include="body\microquery_res.cs" />
+    <Compile Include="body\Inventory\pda_ot_t_check_bak.cs" />
+    <Compile Include="body\rp_t_supcust_fy_detail.cs" />
+    <Compile Include="body\rp_t_supcust_fy_master.cs" />
+    <Compile Include="body\sm_t_salesheet_detail.cs" />
+    <Compile Include="body\sm_t_salesheet_recpay_detail.cs" />
+    <Compile Include="body\sm_t_salesheet_recpay_main.cs" />
+    <Compile Include="body\sys_acc.cs" />
+    <Compile Include="body\tmp_order_child.cs" />
+    <Compile Include="body\wxapp.cs" />
+    <Compile Include="body\wxpay.cs" />
+    <Compile Include="DAL\AccDAL.cs" />
+    <Compile Include="DAL\AdDAL.cs" />
+    <Compile Include="DAL\goodsDAL.cs" />
+    <Compile Include="DAL\goods_clsDAL.cs" />
+    <Compile Include="DAL\goods_stdDAL.cs" />
+    <Compile Include="DAL\merchant.cs" />
+    <Compile Include="DAL\merchantDAL.cs" />
+    <Compile Include="DAL\merchant_configDAL.cs" />
+    <Compile Include="DAL\message_parsDAL.cs" />
+    <Compile Include="DAL\sys_acc.cs" />
+    <Compile Include="DAL\tr_orderDAL.cs" />
+    <Compile Include="DAL\tr_order_itemDAL.cs" />
+    <Compile Include="ExceptionBase.cs" />
+    <Compile Include="Helper\Conv.cs" />
+    <Compile Include="Helper\ConvExtension.cs" />
+    <Compile Include="Helper\Global.cs" />
+    <Compile Include="Helper\IvyException.cs" />
+    <Compile Include="Helper\LogHelper.cs" />
+    <Compile Include="Helper\MD5Helper.cs" />
+    <Compile Include="Helper\ReadXML.cs" />
+    <Compile Include="Helper\Request.cs" />
+    <Compile Include="Helper\RSA.cs" />
+    <Compile Include="Helper\RSAFromPkcs8.cs" />
+    <Compile Include="Helper\sec.cs" />
+    <Compile Include="Helper\SessionHelper.cs" />
+    <Compile Include="Helper\SoftUpdate.cs" />
+    <Compile Include="Helper\StringBuilderForXML.cs" />
+    <Compile Include="Helper\TableToList.cs" />
+    <Compile Include="Helper\VerifyHelper.cs" />
+    <Compile Include="Helper\WebHelper.cs" />
+    <Compile Include="IBLL\API\IAssApiBLL.cs" />
+    <Compile Include="IBLL\API\IOperBLL.cs" />
+    <Compile Include="IBLL\ERP\IBom.cs" />
+    <Compile Include="IBLL\ERP\ICashierBLL.cs" />
+    <Compile Include="IBLL\ERP\ICookbook.cs" />
+    <Compile Include="IBLL\ERP\IARAP_SCPaymentBLL.cs" />
+    <Compile Include="IBLL\ERP\IMobileBLL.cs" />
+    <Compile Include="IBLL\ERP\IModifyCSPriceBLL.cs" />
+    <Compile Include="IBLL\ERP\IMrpBLL.cs" />
+    <Compile Include="IBLL\ERP\IRecipeMenu.cs" />
+    <Compile Include="IBLL\ERP\IComplaintBLL.cs" />
+    <Compile Include="IBLL\ERP\ISupOffer.cs" />
+    <Compile Include="IBLL\ERP\ISysLogBLL.cs" />
+    <Compile Include="IBLL\OnLine\IAd.cs" />
+    <Compile Include="IBLL\OnLine\IAdvice.cs" />
+    <Compile Include="IBLL\ERP\IBank.cs" />
+    <Compile Include="IBLL\ERP\IBranch.cs" />
+    <Compile Include="IBLL\ERP\ICashOrder.cs" />
+    <Compile Include="IBLL\ERP\ICheckBLL.cs" />
+    <Compile Include="IBLL\ERP\ICommon.cs" />
+    <Compile Include="IBLL\OnLine\IConfig.cs" />
+    <Compile Include="IBLL\ERP\ICountDetail.cs" />
+    <Compile Include="IBLL\ERP\ICurPriceOrder.cs" />
+    <Compile Include="IBLL\ERP\ICus.cs" />
+    <Compile Include="IBLL\ERP\ICusFY.cs" />
+    <Compile Include="IBLL\ERP\ICusSettle.cs" />
+    <Compile Include="IBLL\ERP\IDep.cs" />
+    <Compile Include="IBLL\ERP\IFinanceBLL.cs" />
+    <Compile Include="IBLL\ERP\IFYOrder.cs" />
+    <Compile Include="IBLL\OnLine\ICustomer.cs" />
+    <Compile Include="IBLL\OnLine\IGoods.cs" />
+    <Compile Include="IBLL\ERP\IImageClient.cs" />
+    <Compile Include="IBLL\ERP\IInOutBLL.cs" />
+    <Compile Include="IBLL\ERP\IItem.cs" />
+    <Compile Include="IBLL\ERP\IItemCls.cs" />
+    <Compile Include="IBLL\ERP\IMyDestop.cs" />
+    <Compile Include="IBLL\Inventory\ICheckBak.cs" />
+    <Compile Include="IBLL\Inventory\ICheckDetail.cs" />
+    <Compile Include="IBLL\Inventory\IGoods.cs" />
+    <Compile Include="IBLL\Inventory\IOper.cs" />
+    <Compile Include="IBLL\ERP\IOper.cs" />
+    <Compile Include="IBLL\ERP\IOrder.cs" />
+    <Compile Include="IBLL\ERP\IPayBLL.cs" />
+    <Compile Include="IBLL\ERP\IPayment.cs" />
+    <Compile Include="IBLL\ERP\IPayNotify.cs" />
+    <Compile Include="IBLL\ERP\IPeople.cs" />
+    <Compile Include="IBLL\ERP\IPFPrice.cs" />
+    <Compile Include="IBLL\ERP\IPriceBLL.cs" />
+    <Compile Include="IBLL\ERP\IPrint.cs" />
+    <Compile Include="IBLL\ERP\IRegion.cs" />
+    <Compile Include="IBLL\ERP\IReport.cs" />
+    <Compile Include="IBLL\ERP\ISaleOrderBLL.cs" />
+    <Compile Include="IBLL\ERP\ISup.cs" />
+    <Compile Include="IBLL\ERP\ISupcustGroup.cs" />
+    <Compile Include="IBLL\ERP\ISupFY.cs" />
+    <Compile Include="IBLL\ERP\ISupSettle.cs" />
+    <Compile Include="IBLL\ERP\ISys.cs" />
+    <Compile Include="IBLL\ERP\ISysBLL.cs" />
+    <Compile Include="IBLL\ERP\IUpdate.cs" />
+    <Compile Include="body\ic_t_flow_dt.cs" />
+    <Compile Include="body\ot_pay_flow.cs" />
+    <Compile Include="body\sm_t_salesheet.cs" />
+    <Compile Include="IBLL\ERP\IWeight.cs" />
+    <Compile Include="IBLL\OnLine\IMessage.cs" />
+    <Compile Include="IBLL\OnLine\IOrder.cs" />
+    <Compile Include="IBLL\OnLine\IPager.cs" />
+    <Compile Include="IBLL\ProcessingScale\IProcess.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="svr\API\batch.cs" />
+    <Compile Include="svr\API\common.cs" />
+    <Compile Include="svr\ERP\batch_stock.cs" />
+    <Compile Include="svr\ERP\bom.cs" />
+    <Compile Include="svr\ERP\cashier.cs" />
+    <Compile Include="svr\ERP\complaint.cs" />
+    <Compile Include="svr\ERP\cookbook.cs" />
+    <Compile Include="svr\ERP\arap_scpayment.cs" />
+    <Compile Include="svr\ERP\mobile.cs" />
+    <Compile Include="svr\ERP\modify_price.cs" />
+    <Compile Include="svr\ERP\RecipeMenuSvr.cs" />
+    <Compile Include="svr\OnLine\ad.cs" />
+    <Compile Include="svr\OnLine\advice.cs" />
+    <Compile Include="svr\ERP\alinotify.cs" />
+    <Compile Include="svr\ERP\bank.cs" />
+    <Compile Include="svr\BaseService.cs" />
+    <Compile Include="svr\ERP\branch.cs" />
+    <Compile Include="svr\ERP\cash_order.cs" />
+    <Compile Include="svr\ERP\check.cs" />
+    <Compile Include="svr\ERP\common.cs" />
+    <Compile Include="svr\OnLine\config.cs" />
+    <Compile Include="svr\ERP\count_detail.cs" />
+    <Compile Include="svr\ERP\cus_price_order.cs" />
+    <Compile Include="svr\ERP\cus.cs" />
+    <Compile Include="svr\ERP\cus_fy.cs" />
+    <Compile Include="svr\ERP\cus_settle.cs" />
+    <Compile Include="svr\ERP\dep.cs" />
+    <Compile Include="svr\ERP\excel.cs" />
+    <Compile Include="svr\ERP\finance.cs" />
+    <Compile Include="svr\ERP\fy_order.cs" />
+    <Compile Include="svr\OnLine\customer.cs" />
+    <Compile Include="svr\OnLine\goods.cs" />
+    <Compile Include="svr\ERP\inout.cs" />
+    <Compile Include="svr\ERP\item.cs" />
+    <Compile Include="svr\ERP\item_cls.cs" />
+    <Compile Include="svr\ERP\mydestop.cs" />
+    <Compile Include="svr\ERP\oper.cs" />
+    <Compile Include="svr\ERP\order.cs" />
+    <Compile Include="svr\ERP\pay.cs" />
+    <Compile Include="svr\ERP\payment.cs" />
+    <Compile Include="svr\ERP\paynotify.cs" />
+    <Compile Include="svr\OnLine\order.cs" />
+    <Compile Include="svr\OnLine\pager.cs" />
+    <Compile Include="svr\pdasvr\ass_api.cs" />
+    <Compile Include="svr\pdasvr\check_bak.cs" />
+    <Compile Include="svr\pdasvr\check_detail.cs" />
+    <Compile Include="svr\pdasvr\goods.cs" />
+    <Compile Include="svr\pdasvr\oper.cs" />
+    <Compile Include="svr\pdasvr\par.cs" />
+    <Compile Include="svr\ERP\people.cs" />
+    <Compile Include="svr\ERP\pf_price.cs" />
+    <Compile Include="svr\ERP\price.cs" />
+    <Compile Include="svr\ERP\print.cs" />
+    <Compile Include="svr\ERP\region.cs" />
+    <Compile Include="svr\ERP\report.cs" />
+    <Compile Include="svr\ERP\salorder.cs" />
+    <Compile Include="svr\ERP\sup.cs" />
+    <Compile Include="svr\ERP\supcust.cs" />
+    <Compile Include="svr\ERP\supcust_group.cs" />
+    <Compile Include="svr\ERP\sup_fy.cs" />
+    <Compile Include="svr\ERP\sup_settle.cs" />
+    <Compile Include="svr\ERP\sys.cs" />
+    <Compile Include="svr\ERP\update.cs" />
+    <Compile Include="svr\ProcessingScale\Process.cs" />
+    <Compile Include="svr\upload_img.cs" />
+    <Compile Include="svr\ERP\weight.cs" />
+    <Compile Include="Wxpay\MicroPay.cs" />
+    <Compile Include="Wxpay\WxpayConfig.cs" />
+    <Compile Include="Wxpay\WxpayCore.cs" />
+    <Compile Include="Wxpay\WxpayOrder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="libs\IVYTALK.ini" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DB\DB.csproj">
+      <Project>{4d1afefe-f0de-41d9-a182-f04fe0a112ba}</Project>
+      <Name>DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{790481fe-ef64-446a-8e4a-16d63298f9b0}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReadWriteContext\ReadWriteContext.csproj">
+      <Project>{620e5112-7d09-4c0c-ac13-88efd46ba101}</Project>
+      <Name>ReadWriteContext</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2335/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

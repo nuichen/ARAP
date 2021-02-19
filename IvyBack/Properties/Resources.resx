@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="erp_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\erp_logo.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cptx_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cptx_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Del" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Del.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dgv_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dgv_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dgv_del" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dgv_del.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dgv_insert" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dgv_insert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="disconnect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\disconnect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="erp_main__2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\erp_main -2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flower" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flower.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LoadWait" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoadWait.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login_login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_下推" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_下推.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_作废" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_作废.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_供应商等级" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_供应商等级.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_供应商绑定" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_供应商绑定.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_保存" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_保存.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_修改" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_修改.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_修改组" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_修改组.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_全部展开" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_全部展开.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_农残质检" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_农残质检.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_冲销" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_冲销.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_分类质检" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_分类质检.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_删除" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_删除.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_删除组" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_删除组.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_刷新" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_刷新.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_反审" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_反审.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_合并" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_合并.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_启用" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_启用.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_复制" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_复制.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_完成" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_完成.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_审核" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_审核.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_导入" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_导入.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_导出" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_导出.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_导航" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_导航.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_应收应付" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_应收应付.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_弃审" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_弃审.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_打印" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_打印.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_批量修改" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_批量修改.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_折叠" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_折叠.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_拆分" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_拆分.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_挂起" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_挂起.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_撤销" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_撤销.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_收付款" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_收付款.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_新增" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_新增.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_新增下级" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_新增下级.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_新建组" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_新建组.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_查询" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_查询.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_添加凭证" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_添加凭证.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_禁用" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_禁用.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_绑定" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_绑定.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_结转" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_结转.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_统筹" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_统筹.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_菜单" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_菜单.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_质检" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_质检.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_运算" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_运算.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_退出" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_退出.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_预览" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_预览.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pnl_top_fill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pnl_top_fill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slogan2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slogan2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tool_exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tool_exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tool_flush" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tool_flush.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="上" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\上.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="下" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\下.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="中间1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\中间1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="修改密码" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\修改密码.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="关闭" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\关闭.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="出纳_未选中" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\出纳_未选中.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="出纳_选中" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\出纳_选中.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="初始化01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\初始化01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="功能按钮" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\功能按钮.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="单据Tab1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\单据Tab1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="单据Tab2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\单据Tab2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="右1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\右1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="右箭头" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\右箭头.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="圆圈" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\圆圈.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="垂直_中间" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\垂直_中间.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="垂直_滚动条" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\垂直_滚动条.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="导航_出纳管理_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\导航_出纳管理_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="导航_出纳管理_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\导航_出纳管理_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="导航_应收应付_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\导航_应收应付_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="导航_应收应付_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\导航_应收应付_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="导航条" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\导航2 背景11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="导航栏为选中" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\导航栏为选中.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="导航栏关闭" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\导航栏关闭2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="导航栏未选中" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\导航栏未选中1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="导航栏选中" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\导航栏选中2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="小标题" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\小标题.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="工具栏_保存" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\工具栏_保存.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="工具栏_修改01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\工具栏_修改01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="工具栏_修改组" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\工具栏_修改组.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="工具栏_全不选" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\工具栏_全不选.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="工具栏_全选" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\工具栏_全选.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="工具栏_全部展开折叠01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\工具栏_全部展开折叠01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="工具栏_关闭01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\工具栏_关闭01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="工具栏_删除01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\工具栏_删除01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="工具栏_删除组" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\工具栏_删除组.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="工具栏_授权" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\工具栏_授权.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="工具栏_新增同级01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\工具栏_新增同级01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="工具栏_新建01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\工具栏_新建01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="工具栏_新建组" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\工具栏_新建组.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="工具栏_首页按钮" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\工具栏_首页按钮1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="工具栏背景" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\工具栏背景.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="左1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\左1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="应收应付_未选中" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\应收应付-未选中.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="应收应付_选中" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\应收应付-选中.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="意马争鲜logo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\意马争鲜logo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="报表图标前缀" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\报表图标前缀.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="报表拉伸条" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\报表拉伸条.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="报表样式维护文字" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\报表样式维护文字.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="按钮_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\按钮-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="按钮_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\按钮-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="本周按钮_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\本周按钮-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="本周按钮_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\本周按钮-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="查找服务器" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\查找服务器.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="标题" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\标题.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="此logo只用在主界面" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\此logo只用在主界面.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="滚动条" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\滚动条.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="滚动条_中间" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\中间.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="滚动条_右" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\右.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="滚动条_左" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\左.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="滚动条_滚动条" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\滚动条1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="生鲜食材配送管理系统" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\生鲜食材配送管理系统.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="登录背景" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\登录背景.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="秤评天下LOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\秤评天下LOGO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="秤评天下LOGO2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\秤评天下LOGO2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="系统参数背景" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\系统参数背景.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="系统设置参数" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\系统设置参数.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="结转" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\结转.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="编辑" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\编辑.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="菜单栏" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\左侧背景1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="警铃" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\警铃.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="购物车" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\购物车.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="顶部" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\顶部.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="顶部右侧" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\顶部右侧.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="顶部右侧2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\顶部右侧2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="顶部左侧" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\顶部左侧.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="顶部拉伸条" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\顶部拉伸条.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="颜色" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\颜色.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="首页图标背景" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\首页图标背景.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="首页按钮1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\首页按钮1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

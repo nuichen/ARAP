@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{790481FE-EF64-446A-8E4A-16D63298F9B0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Model</RootNamespace>
+    <AssemblyName>Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseModel\bi_t_company_type.cs" />
+    <Compile Include="BaseModel\bi_t_complaint_type.cs" />
+    <Compile Include="BaseModel\bi_t_formula_cls.cs" />
+    <Compile Include="BaseModel\bi_t_supcust_car.cs" />
+    <Compile Include="BaseModel\rp_t_complaint_flow.cs" />
+    <Compile Include="BaseModel\rp_t_cust_item_detail.cs" />
+    <Compile Include="BaseModel\rp_t_cust_item_master.cs" />
+    <Compile Include="CashierModel\rp_t_bank_beginbalance.cs" />
+    <Compile Include="CashierModel\rp_t_pay_detail.cs" />
+    <Compile Include="CashierModel\rp_t_pay_info.cs" />
+    <Compile Include="FormulaModel\co_t_price_order_child.cs" />
+    <Compile Include="FormulaModel\co_t_price_order_main.cs" />
+    <Compile Include="InOutModel\ic_t_batch_branch_stock.cs" />
+    <Compile Include="InOutModel\ic_t_inoutstore_recpay_detail.cs" />
+    <Compile Include="InOutModel\ot_processing.cs" />
+    <Compile Include="InOutModel\sm_t_salesheet_recpay_detail.cs" />
+    <Compile Include="InOutModel\rp_t_batch_flow.cs" />
+    <Compile Include="InOutModel\sm_t_salesheet_recpay_main.cs" />
+    <Compile Include="InOutModel\ic_t_inoutstore_recpay_main.cs" />
+    <Compile Include="OnLineModel\ad.cs" />
+    <Compile Include="BaseModel\bi_t_bom_detail.cs" />
+    <Compile Include="BaseModel\bi_t_bom_master.cs" />
+    <Compile Include="BaseModel\cust_price.cs" />
+    <Compile Include="BaseModel\bi_t_formula_detail.cs" />
+    <Compile Include="BaseModel\bi_t_formula_main.cs" />
+    <Compile Include="BaseModel\bi_t_bulk_item.cs" />
+    <Compile Include="InOutModel\co_t_cg_order_detail.cs" />
+    <Compile Include="FormulaModel\co_t_menu_order_detail.cs" />
+    <Compile Include="FormulaModel\co_t_menu_order_main.cs" />
+    <Compile Include="FinanceModel\bank_t_cash_detail.cs" />
+    <Compile Include="FinanceModel\bank_t_cash_master.cs" />
+    <Compile Include="FinanceModel\bank_t_visa_money.cs" />
+    <Compile Include="BaseModel\bi_identity.cs" />
+    <Compile Include="BaseModel\bi_t_bank_info.cs" />
+    <Compile Include="BaseModel\bi_t_branch_info.cs" />
+    <Compile Include="BaseModel\bi_t_cust_price.cs" />
+    <Compile Include="BaseModel\bi_t_dept_info.cs" />
+    <Compile Include="BaseModel\bi_t_item_cls.cs" />
+    <Compile Include="BaseModel\bi_t_item_info.cs" />
+    <Compile Include="BaseModel\bi_t_payment_info.cs" />
+    <Compile Include="BaseModel\bi_t_people_info.cs" />
+    <Compile Include="BaseModel\bi_t_region_info.cs" />
+    <Compile Include="BaseModel\bi_t_supcust_bind_item.cs" />
+    <Compile Include="BaseModel\bi_t_supcust_group.cs" />
+    <Compile Include="BaseModel\bi_t_supcust_info.cs" />
+    <Compile Include="BaseModel\bi_t_sup_item.cs" />
+    <Compile Include="BaseModel\bi_t_sz_type.cs" />
+    <Compile Include="OnLineModel\CheckModel.cs" />
+    <Compile Include="OnLineModel\advice.cs" />
+    <Compile Include="BaseModel\goods_brand.cs" />
+    <Compile Include="FinanceModel\rp_t_supcust_income_revenue.cs" />
+    <Compile Include="Helper\Conv.cs" />
+    <Compile Include="InOutModel\co_t_order_child.cs" />
+    <Compile Include="InOutModel\co_t_order_main.cs" />
+    <Compile Include="OnLineModel\customer.cs" />
+    <Compile Include="OnLineModel\discount.cs" />
+    <Compile Include="BaseModel\goods.cs" />
+    <Compile Include="BaseModel\goods_cls.cs" />
+    <Compile Include="BaseModel\goods_std.cs" />
+    <Compile Include="InOutModel\ic_t_branch_stock.cs" />
+    <Compile Include="InOutModel\ic_t_check_bak.cs" />
+    <Compile Include="InOutModel\ic_t_check_detail.cs" />
+    <Compile Include="InOutModel\ic_t_check_finish.cs" />
+    <Compile Include="InOutModel\ic_t_check_init.cs" />
+    <Compile Include="InOutModel\ic_t_check_master.cs" />
+    <Compile Include="InOutModel\ic_t_cost_adjust.cs" />
+    <Compile Include="InOutModel\ic_t_flow_dt.cs" />
+    <Compile Include="InOutModel\ic_t_inout_store_detail.cs" />
+    <Compile Include="InOutModel\ic_t_inout_store_master.cs" />
+    <Compile Include="InOutModel\ot_check_flow.cs" />
+    <Compile Include="OnLineModel\key_value.cs" />
+    <Compile Include="OnLineModel\merchant.cs" />
+    <Compile Include="OnLineModel\merchant_acc.cs" />
+    <Compile Include="OnLineModel\merchant_oper.cs" />
+    <Compile Include="InOutModel\ot_weighing.cs" />
+    <Compile Include="PaymentModel\rp_t_aging_group.cs" />
+    <Compile Include="PaymentModel\rp_t_arap_transformation.cs" />
+    <Compile Include="PaymentModel\rp_t_collection_way.cs" />
+    <Compile Include="PaymentModel\ot_supcust_beginbalance.cs" />
+    <Compile Include="PaymentModel\rp_t_account_notice_detail.cs" />
+    <Compile Include="PaymentModel\rp_t_account_notice.cs" />
+    <Compile Include="StaticType\CookbookStaticType.cs" />
+    <Compile Include="StaticType\IvyTransFunction.cs" />
+    <Compile Include="StaticType\ProcessStaticType.cs" />
+    <Compile Include="SysModel\netsetup.cs" />
+    <Compile Include="FinanceModel\ot_pay_flow.cs" />
+    <Compile Include="FinanceModel\pm_t_flow_main.cs" />
+    <Compile Include="FinanceModel\pm_t_price_flow_detial.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FinanceModel\rp_t_accout_payrec_flow.cs" />
+    <Compile Include="FinanceModel\rp_t_recpay_record_detail.cs" />
+    <Compile Include="FinanceModel\rp_t_recpay_record_info.cs" />
+    <Compile Include="FinanceModel\rp_t_supcust_cash_flow.cs" />
+    <Compile Include="FinanceModel\rp_t_supcust_fy_detail.cs" />
+    <Compile Include="FinanceModel\rp_t_supcust_fy_master.cs" />
+    <Compile Include="OnLineModel\salesman.cs" />
+    <Compile Include="SysModel\sa_t_mobile_data_main.cs" />
+    <Compile Include="SysModel\sa_t_mobile_oper.cs" />
+    <Compile Include="SysModel\sa_t_operator_i.cs" />
+    <Compile Include="SysModel\sa_t_oper_grant.cs" />
+    <Compile Include="SysModel\sa_t_oper_type.cs" />
+    <Compile Include="InOutModel\sm_t_salesheet.cs" />
+    <Compile Include="InOutModel\sm_t_salesheet_detail.cs" />
+    <Compile Include="SysModel\sys_acc.cs" />
+    <Compile Include="SysModel\sys_t_operator_log.cs" />
+    <Compile Include="SysModel\sys_t_oper_mylove.cs" />
+    <Compile Include="SysModel\sys_t_oper_type.cs" />
+    <Compile Include="SysModel\sys_t_print_style.cs" />
+    <Compile Include="SysModel\sys_t_print_style_data.cs" />
+    <Compile Include="SysModel\sys_t_print_style_default.cs" />
+    <Compile Include="SysModel\sys_t_system.cs" />
+    <Compile Include="OnLineModel\tb_company.cs" />
+    <Compile Include="OnLineModel\theme.cs" />
+    <Compile Include="OnLineModel\tr_address.cs" />
+    <Compile Include="OnLineModel\tr_order.cs" />
+    <Compile Include="OnLineModel\tr_order_item.cs" />
+    <Compile Include="OnLineModel\tr_shopcart.cs" />
+    <Compile Include="OnLineModel\wm_order.cs" />
+    <Compile Include="OnLineModel\wm_order_item.cs" />
+    <Compile Include="OnLineModel\wx_user.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
