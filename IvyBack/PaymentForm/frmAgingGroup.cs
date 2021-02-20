@@ -155,6 +155,10 @@ namespace IvyBack.PaymentForm
             {
                 DataGridViewRow row = this.dgv.CurrentRow;
                 if (row == null) return;
+                if (row.Cells[0].Value==null)
+                {
+                    return;
+                }
                 if (YesNoForm.ShowFrom("确认要删除该行吗？") == DialogResult.Yes)
                 {
                     this.dgv.Rows.RemoveAt(row.Index);

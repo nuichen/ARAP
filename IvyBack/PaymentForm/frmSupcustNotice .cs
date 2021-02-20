@@ -532,18 +532,18 @@ namespace IvyBack.VoucherForm
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //if (txtapprove_man.Text.Trim() != "")
-            //{
-            //    tsbDel.Enabled = false;
-            //    tsbSave.Enabled = false;
-            //    tsbCheck.Enabled = false;
-            //}
-            //else
-            //{
+            if (txtapprove_man.Text.Trim() != "")
+            {
+               tsbDel.Enabled = false;
+               tsbSave.Enabled = false;
+                tsbCheck.Enabled = false;
+            }
+            else
+            {
                 tsbDel.Enabled = true;
                 tsbSave.Enabled = true;
                 tsbCheck.Enabled = true;
-            //}
+            }
         }
 
         bool isSelect = false;
