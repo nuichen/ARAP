@@ -417,7 +417,7 @@ namespace IvyBack.VoucherForm
                 //txt_old_no.Text = r1["old_no"].ToString();
                 //
                 editGrid1.DataSource = tb2;
-
+                //按钮的选中状态
 /*                Dictionary<string, object> dic = this.Tag as Dictionary<string, object>;
                 this.Tag = Helper.Conv.ControlsAdds(this, dic);*/
             }
