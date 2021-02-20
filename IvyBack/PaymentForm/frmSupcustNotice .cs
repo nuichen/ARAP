@@ -52,6 +52,7 @@ namespace IvyBack.VoucherForm
             InitializeComponent();
             this.runType1 = runType2;
             Helper.GlobalData.InitForm(this);
+            
             //
             var tb = new DataTable();
             tb.Columns.Add("voucher_no");
@@ -417,8 +418,8 @@ namespace IvyBack.VoucherForm
                 //
                 editGrid1.DataSource = tb2;
 
-                Dictionary<string, object> dic = this.Tag as Dictionary<string, object>;
-                this.Tag = Helper.Conv.ControlsAdds(this, dic);
+/*                Dictionary<string, object> dic = this.Tag as Dictionary<string, object>;
+                this.Tag = Helper.Conv.ControlsAdds(this, dic);*/
             }
             catch (Exception ex)
             {
