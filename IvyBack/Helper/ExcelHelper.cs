@@ -373,7 +373,33 @@ namespace IvyBack.Helper
             }
             workbook.Save(path);
         }
+        public void WriteToExcelformain(DataTable dt, string path)
+        {
+            Workbook workbook = new Workbook(); //工作簿 
+            Worksheet sheet = workbook.Worksheets[0]; //工作表 
+            Cells cells = sheet.Cells;//单元格 
 
+
+            int Colnum = dt.Columns.Count;//表格列数 
+            int Rownum = dt.Rows.Count;//表格行数 
+
+            //生成列名
+            for (int i = 0; i < dt.Columns.Count; i++)
+            {
+                cells[0, i].PutValue(dt.Columns[i]);
+            }
+
+            //生成数据行 
+            for (int i = 1; i <= Rownum; i++)
+            {
+                for (int k = 0; k < Colnum; k++)
+                {
+                    cells[i, k].PutValue(dt.Rows[i - 1][k].ToString());
+                }
+            }
+
+            workbook.Save(path);
+        }
 
         /// <summary> 
         /// 导出数据到模版 

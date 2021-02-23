@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Aspose.Cells;
 using IvyBack.Helper;
 using Model.StaticType;
 
@@ -55,6 +57,7 @@ namespace IvyBack.VoucherForm
                 dataGrid1.AddColumn("cus_name", "供应商名称", "", 150, 1, "");
 
             }
+             
                 dataGrid1.AddColumn("total_amount", "结算金额", "", 90, 3, "0.00");
             dataGrid1.AddColumn("free_money", "免付金额", "", 90, 3, "0.00");
             //dataGrid1.AddColumn("pay_way_a", "付款方式", "", 120, 1, "");
@@ -89,6 +92,7 @@ namespace IvyBack.VoucherForm
             this.dateTextBox2.Text = System.DateTime.Now.ToString("yyyy-MM-dd");
             if (runType1 == 1)
             {
+                this.dataGrid1.IsSelect = false;
                 //var cus = paymentbll.GetSupcustList("C");
                 IBLL.ICus bll = new BLL.CusBLL();
                 int tmp;
@@ -97,6 +101,7 @@ namespace IvyBack.VoucherForm
             }
             else
             {
+                this.dataGrid1.IsSelect = true;
                 //var cus = paymentbll.GetSupcustList("S");
                 IBLL.ISup bll = new BLL.SupBLL();
                 int tmp;
@@ -486,6 +491,86 @@ namespace IvyBack.VoucherForm
             {
                 MsgForm.ShowFrom(ex);
             }
+        }
+
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            if (this.dataGrid1.DataSource.Rows.Count<1)
+            {
+                MsgForm.ShowFrom("表体没有数据！");
+                return;
+            }
+            try
+            {
+                Daochu();
+            }
+            catch (Exception ex)
+            {
+
+                MsgForm.ShowFrom(ex);
+            }
+        }
+        private void Daochu()
+        {
+            string localFilePath = "";
+            //string localFilePath, fileNameExt, newFileName, FilePath; 
+            SaveFileDialog sfd = new SaveFileDialog();
+            //设置文件类型 
+            sfd.Filter = "Excel表格（*.xls）|*.xls";
+            //设置默认文件类型显示顺序 
+            sfd.FilterIndex = 1;
+            //保存对话框是否记忆上次打开的目录 
+            sfd.RestoreDirectory = true;
+            sfd.FileName = DateTime.Now.ToString("yyyy-MM-dd HHmmss") + "-" + "供应商结算单";
+            //点了保存按钮进入 
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                localFilePath = sfd.FileName.ToString() + localFilePath.Substring(localFilePath.LastIndexOf("\\") + 1); //获得文件路径 
+            }
+            if (localFilePath=="")
+            {
+                return;
+            }
+            List<DataRow> rows = dataGrid1.GetSelectDatas();
+            if (rows.Count==0)
+            {
+                MsgForm.ShowFrom("请选择单据！");
+                return;
+            }
+           // 审核状态，单据号，供应商编号，供应商名称，结算金额，免付金额，经办人，审核人，审核日期，操作员，操作日期
+            DataTable dt_dgvc = new DataTable();
+            dt_dgvc.Columns.Add("审核状态");
+            dt_dgvc.Columns.Add("单据号");
+            dt_dgvc.Columns.Add("供应商编号");
+            dt_dgvc.Columns.Add("供应商名称");
+            dt_dgvc.Columns.Add("结算金额");
+            dt_dgvc.Columns.Add("免付金额");
+            dt_dgvc.Columns.Add("经办人");
+            dt_dgvc.Columns.Add("审核人");
+            dt_dgvc.Columns.Add("审核日期");
+            dt_dgvc.Columns.Add("操作员");
+            dt_dgvc.Columns.Add("操作日期");
+
+            foreach (DataRow row in rows)
+            {
+                DataRow dataRow = dt_dgvc.NewRow();
+                dataRow["审核状态"] = row["approve_flag"].ToString();
+                dataRow["单据号"] = row["sheet_no"].ToString();
+                dataRow["供应商编号"] = row["cus_no"].ToString();
+                dataRow["供应商名称"] = row["cus_name"].ToString();
+                dataRow["结算金额"] = row["total_amount"].ToString();
+                dataRow["免付金额"] = row["free_money"].ToString();
+                dataRow["经办人"] = row["deal_man_a"].ToString();
+                dataRow["审核人"] = row["approve_man_a"].ToString();
+                dataRow["审核日期"] = row["approve_date"].ToString();
+                dataRow["操作员"] = row["oper_id_a"].ToString();
+                dataRow["操作日期"] = row["oper_date"].ToString();
+                dt_dgvc.Rows.Add(dataRow);
+            }
+            ExcelHelper excel = new ExcelHelper();
+            excel.WriteToExcel(dt_dgvc, localFilePath);
+            MsgForm.ShowFrom("导出成功！");
         }
     }
 }
