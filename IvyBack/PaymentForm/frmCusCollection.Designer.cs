@@ -452,12 +452,12 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label13.ForeColor = System.Drawing.Color.Maroon;
-            this.label13.Location = new System.Drawing.Point(330, 222);
+            this.label13.Location = new System.Drawing.Point(382, 222);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(131, 13);
+            this.label13.Size = new System.Drawing.Size(66, 13);
             this.label13.TabIndex = 9;
-            this.label13.Text = "本次累计可核销金额:";
+            this.label13.Text = "结算金额:";
             // 
             // label3
             // 

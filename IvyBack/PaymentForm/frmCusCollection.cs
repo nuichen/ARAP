@@ -36,13 +36,16 @@ namespace IvyBack.VoucherForm
             {
                 if (value == 1)
                 {
-
+                    this.label11.Text = "还款金额：";
+                    this.label13.Text = "结算金额：";
                 }
                 else
                 {
                     this.label1.Text = "供应商结算单";
                     this.label2.Text = "供应商：";
-                    //label11.Text = "付款金额";
+
+                    this.label11.Text = "付款金额：";
+                    this.label13.Text = "结算金额：";
 
                 }
                 _runType1 = value;
