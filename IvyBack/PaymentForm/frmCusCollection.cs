@@ -242,7 +242,7 @@ namespace IvyBack.VoucherForm
                 }
                 if (Helper.Conv.ToDecimal(txttotal_amount.Text.Trim()) == 0)
                 {
-                    if (runType==1)
+                    if (runType1==1)
                     {
                         throw new Exception("收款金额不能为0!");
                     }
