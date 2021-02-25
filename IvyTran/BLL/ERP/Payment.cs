@@ -29,12 +29,22 @@ namespace IvyTran.BLL.ERP
             {
                 throw new Exception("已经存在付款编码"+item.pay_way );
             }
+            if (item.is_sup_default == "1")
+            {
+                 sql = " update bi_t_payment_info set is_sup_default='0' ";
+                db.ExecuteScalar(sql, null);
+            }
             db.Insert(item);
         }
 
         void IPayment.Change(Model.bi_t_payment_info item)
         {
             DB.IDB db  = new DB.DBByAutoClose(AppSetting.conn);
+            if (item.is_sup_default=="1")
+            {
+                string sql = " update bi_t_payment_info set is_sup_default='0' ";
+                db.ExecuteScalar(sql, null);
+            }
             db.Update(item,"pay_way");
         }
 
