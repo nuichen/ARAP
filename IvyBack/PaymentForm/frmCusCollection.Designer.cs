@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCusCollection));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -86,6 +87,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
@@ -125,6 +127,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1006, 288);
             this.panel1.TabIndex = 9;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(789, 269);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(29, 12);
+            this.label16.TabIndex = 15;
+            this.label16.Text = "0.00";
             // 
             // button1
             // 
@@ -818,5 +829,6 @@
         private cons.MyTextBox txtbank;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label16;
     }
 }

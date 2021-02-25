@@ -171,13 +171,17 @@ namespace IvyTran.BLL.ERP
                 //{
                 //    db.Close();
                 //}
-                sql = "select * from ot_supcust_beginbalance ";
-                var tb2 = d.ExecuteToTable(sql, null);
-                if (tb2.Rows.Count > 0)
+                foreach (var lst in lr)
                 {
-                    if (Conv.ToString(tb2.Rows[0]["approve_flag"]) == "1")
-                        throw new Exception("已经审核，不允许删除数据，如需要删除数据请反审");
+                    sql = "select * from ot_supcust_beginbalance where supcust_flag='" + is_cs + "' and supcust_no='"+lst.supcust_no+"'";
+                    var tb2 = d.ExecuteToTable(sql, null);
+                    if (tb2.Rows.Count > 0)
+                    {
+                        if (Conv.ToString(tb2.Rows[0]["approve_flag"]) == "1")
+                            throw new Exception(lst.supcust_no+"已经审核，请先反审！");
+                    }
                 }
+
                 string supcust_no_list = "'" + lr[0].supcust_no + "'";
                 for (int i = 1; i < lr.Count; i++)
                 {

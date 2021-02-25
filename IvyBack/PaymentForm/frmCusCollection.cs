@@ -678,8 +678,17 @@ namespace IvyBack.VoucherForm
                 if ("0".Equals(select_flag))
                 {
                     row["select_flag"] = "1";
+
                     //row["pay_amount"] = Conv.ToDecimal(row["yf_amount"]);
                     //row["pay_free"] = 0.00;
+                    if (runType1==0)
+                    {
+                        label16.Text = (label16.Text.ToDecimal() + row["yf_amount"].ToDecimal()).ToString("0.00");
+                        row["pay_amount"] = row["yf_amount"];
+                        row["num1"] = "0.00";
+                        txttotal_amount.Text = (txttotal_amount.Text.ToDecimal() + row["yf_amount"].ToDecimal()).ToString("0.00");
+                    }
+
                 }
                 else
                 {
@@ -690,7 +699,14 @@ namespace IvyBack.VoucherForm
                     {
                         txtThisSurplus.Text = Conv.ToString(Conv.ToDecimal(txtThisSurplus.Text) + Conv.ToDecimal(row["pay_amount"]));
                     }
-                    row["pay_amount"] = 0.00;
+                    if (runType1==0)
+                    {
+                        row["pay_amount"] = 0.00;
+                        label16.Text = (label16.Text.ToDecimal() - row["yf_amount"].ToDecimal()).ToString("0.00");
+                        txttotal_amount.Text = (txttotal_amount.Text.ToDecimal() - row["yf_amount"].ToDecimal()).ToString("0.00");
+                        row["num1"] = row["yf_amount"];
+                    }
+
                     //row["pay_free"] = 0.00;
                 }
 
@@ -736,6 +752,12 @@ namespace IvyBack.VoucherForm
                     if (YesNoForm.ShowFrom("确认要清空覆盖吗?") == DialogResult.Yes)
                     {
                         this.editGrid1.DataSource.Rows.Clear();
+                        if (runType1==0)
+                        {
+                            this.txttotal_amount.Text = "0.00";
+                            this.label16.Text = "0.00";
+                        }
+                        
                     }
                     else
                     {
@@ -774,7 +796,7 @@ namespace IvyBack.VoucherForm
                             foreach (DataRow dr in tb.Rows)
                             {
                                 var r = this.editGrid1.DataSource.NewRow();
-                                r["select_flag"] = "1";
+                                r["select_flag"] = "0";
                                 r["path"] = dr["pay_type"];
                                 r["voucher_no"] = dr["voucher_no"];
                                 r["oper_date"] = dr["oper_date"];
@@ -1421,7 +1443,7 @@ namespace IvyBack.VoucherForm
                 foreach (DataRow row in list)
                 {
                     //DataRow row1 = row;
-
+                    row["select_flag"] = "0";
                     editGrid1.DataSource.ImportRow(row);
                 }
                 this.editGrid1.DataSource = this.editGrid1.DataSource;
