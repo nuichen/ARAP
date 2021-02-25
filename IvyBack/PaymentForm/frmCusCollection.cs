@@ -1323,26 +1323,34 @@ namespace IvyBack.VoucherForm
             }
             if (pay_dt==null)
             {
-                pay_dt = new DataTable();
-                pay_dt.Columns.Add("pay_name");
-                pay_dt.Columns.Add("total_amount");
-                pay_dt.Rows.Add(pay_dt.NewRow());
-                if (table.Rows.Count>0)
+                if (runType1 == 0 && flag == 0)
                 {
-                    pay_dt.Rows[0]["pay_name"] = table.Rows[0]["pay_way"].ToString() + "/" + table.Rows[0]["pay_name"].ToString();
-                    pay_dt.Rows[0]["total_amount"] = this.label16.Text.ToString();
+                    pay_dt = new DataTable();
+                    pay_dt.Columns.Add("pay_name");
+                    pay_dt.Columns.Add("total_amount");
+                    pay_dt.Rows.Add(pay_dt.NewRow());
+                    if (table.Rows.Count > 0)
+                    {
+                        pay_dt.Rows[0]["pay_name"] = table.Rows[0]["pay_way"].ToString() + "/" + table.Rows[0]["pay_name"].ToString();
+                        pay_dt.Rows[0]["total_amount"] = this.label16.Text.ToString();
+                    }
                 }
+
 
             }
             else
             {
-                foreach (DataRow row in pay_dt.Rows)
+                if (runType1 == 0 && flag == 0)
                 {
-                    if (row["pay_name"].ToString()== table.Rows[0]["pay_way"].ToString() + "/" + table.Rows[0]["pay_name"].ToString())
+                    foreach (DataRow row in pay_dt.Rows)
                     {
-                        row["total_amount"] = this.label16.Text.ToString();
+                        if (row["pay_name"].ToString() == table.Rows[0]["pay_way"].ToString() + "/" + table.Rows[0]["pay_name"].ToString())
+                        {
+                            row["total_amount"] = this.label16.Text.ToString();
+                        }
                     }
                 }
+
             }
             decimal num=0.00m;
             var frm = new frmPaymentDetailed(pay_dt);
