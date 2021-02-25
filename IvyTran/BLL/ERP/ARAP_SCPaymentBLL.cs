@@ -238,7 +238,7 @@ namespace IvyTran.BLL.ERP
 
                 db.BeginTran();
                 //
-                sql = "select * from ot_supcust_beginbalance ";
+                sql = "select * from ot_supcust_beginbalance where supcust_no in("+keyword+") and supcust_flag='"+is_cs+"'";
                 var tb2 = d.ExecuteToTable(sql, null);
                 if (tb2.Rows.Count > 0)
                 {
