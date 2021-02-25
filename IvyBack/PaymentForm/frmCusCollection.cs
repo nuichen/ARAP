@@ -26,6 +26,7 @@ namespace IvyBack.VoucherForm
         private DataTable pay_dt;
         IBLL.IARAP_SCPaymentBLL paymentbll = new BLL.ARAP_SCPaymentBLL();
         private int _runType1 = 0;//0:供应商 1:客户
+        private int flag = 1;
         public int runType1
         {
             get
@@ -127,6 +128,12 @@ namespace IvyBack.VoucherForm
                             {
                                 this.txtcus.Bind(bll2.GetDataTable("", "", 1, 1, 20000, out tmp), 300, 200, "supcust_no", "supcust_no:供应商编码:100,sup_name:供应商名称:150", "supcust_no/sup_name->Text");
                             });
+                            IBLL.IPayment payment = new BLL.PaymentBLL();
+                            var table = payment.Getlist();
+                            if (table.Rows.Count>0)
+                            {
+                                flag = 0;
+                            }
                         }
                         //BLL.CusFY bll = new BLL.CusFY();
                         //var cus = bll.GetCusList();
@@ -681,7 +688,7 @@ namespace IvyBack.VoucherForm
 
                     //row["pay_amount"] = Conv.ToDecimal(row["yf_amount"]);
                     //row["pay_free"] = 0.00;
-                    if (runType1==0)
+                    if (runType1==0&&flag==0)
                     {
                         label16.Text = (label16.Text.ToDecimal() + row["yf_amount"].ToDecimal()).ToString("0.00");
                         row["pay_amount"] = row["yf_amount"];
@@ -699,7 +706,7 @@ namespace IvyBack.VoucherForm
                     {
                         txtThisSurplus.Text = Conv.ToString(Conv.ToDecimal(txtThisSurplus.Text) + Conv.ToDecimal(row["pay_amount"]));
                     }
-                    if (runType1==0)
+                    if (runType1==0&&flag==0)
                     {
                         row["pay_amount"] = 0.00;
                         label16.Text = (label16.Text.ToDecimal() - row["yf_amount"].ToDecimal()).ToString("0.00");

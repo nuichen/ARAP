@@ -83,5 +83,18 @@ namespace IvyBack.BLL
 
             if (!r.ReadSuccess()) throw new Exception(r.ReadMessage());
         }
+
+        public DataTable Getlist()
+        {
+            JsonRequest r = new JsonRequest();
+
+            r.request("/payment?t=Getlist");
+
+            if (!r.ReadSuccess()) throw new Exception(r.ReadMessage());
+
+            DataTable tb = r.GetDataTable();
+
+            return tb;
+        }
     }
 }

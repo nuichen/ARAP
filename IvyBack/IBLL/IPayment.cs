@@ -14,6 +14,7 @@ namespace IvyBack.IBLL
         void Add(bi_t_payment_info pay);
         void Del(bi_t_payment_info pay);
         void Upload(bi_t_payment_info pay);
+        DataTable Getlist();
 
     }
 }

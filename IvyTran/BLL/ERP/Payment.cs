@@ -85,5 +85,13 @@ namespace IvyTran.BLL.ERP
            
             db.ExecuteScalar(sql, null);
         }
+
+        public System.Data.DataTable Getlist()
+        {
+            DB.IDB db = new DB.DBByAutoClose(AppSetting.conn);
+            string sql = " select * from bi_t_payment_info where is_sup_default='1'";
+            var tb = db.ExecuteToTable(sql, null);
+            return tb;
+        }
     }
 }

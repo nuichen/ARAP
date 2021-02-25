@@ -7,5 +7,6 @@
         void Add(Model.bi_t_payment_info  item);
         void Change(Model.bi_t_payment_info item);
         void Delete(string pay_way);
+        System.Data.DataTable Getlist();
     }
 }

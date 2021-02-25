@@ -57,6 +57,11 @@ namespace IvyTran.svr.ERP
             string pay_way = w.Read("pay_way");
             bll.Delete(pay_way);
         }
+        public void Getlist(WebHelper w, Dictionary<string, object> kv)
+        {
+            var tb = bll.Getlist();
+            w.Write("data", tb);
+        }
 
     }
 }
