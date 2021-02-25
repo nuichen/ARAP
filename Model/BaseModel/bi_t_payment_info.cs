@@ -14,5 +14,7 @@ namespace Model
         public string display { get; set; }
         public string visa_id { get; set; }
         //public string subject_no { get; set; }
+        //是否供应商默认结算方式
+        public string is_sup_default { get; set; }//0:否 1：是
     }
 }

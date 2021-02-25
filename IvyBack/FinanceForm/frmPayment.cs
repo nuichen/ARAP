@@ -26,6 +26,7 @@ namespace IvyBack.FinanceForm
             this.dgvPay.AddColumn("pay_name", "名称", "", 300, 1, "");
             this.dgvPay.AddColumn("visa_id", "现金银行代码", "", 150, 1, "");
             this.dgvPay.AddColumn("visa_nm", "现金银行名称", "", 160, 2, "");
+            this.dgvPay.AddColumn("is_sup_default", "是否供应商默认结算方式", "", 160, 2, "{0: ,1:√}");
 
             this.dgvPay.DataSource = Conv.Assign<bi_t_payment_info>();
         }

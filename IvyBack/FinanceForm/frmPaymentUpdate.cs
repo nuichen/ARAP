@@ -50,7 +50,14 @@ namespace IvyBack.FinanceForm
                     this.txtvisa.Text = payment.visa_id + "/" + dr["visa_nm"].ToString();
                     
                 }
-                   
+                if (payment.is_sup_default=="1")
+                {
+                    this.myCheckBox1.Checked = true;
+                }
+                else
+                {
+                    this.myCheckBox1.Checked = false;
+                }
                 txtPaynum.ReadOnly = true;
                 //checkIsStop.Checked = payment.display.Equals("0");
             
@@ -77,6 +84,14 @@ namespace IvyBack.FinanceForm
                     pay_way = txtPaynum.Text,                  
                     visa_id = txtvisa.Text.Split('/')[0]//visa_id=txtvisa.Text.Split('/')[0]
                 };
+                if (this.myCheckBox1.Checked == true)
+                {
+                    sup.is_sup_default = "1";
+                }
+                else
+                {
+                    sup.is_sup_default = "0";
+                }
                 bll.Add(sup);
             }
             else
@@ -85,6 +100,14 @@ namespace IvyBack.FinanceForm
                 payment.display = "1";//this.checkIsStop.Checked ? "0" : "1";
                 payment.pay_name = this.txtPayName.Text;
                 payment.visa_id = txtvisa.Text.Split('/')[0];
+                if (this.myCheckBox1.Checked == true)
+                {
+                    payment.is_sup_default = "1";
+                }
+                else
+                {
+                    payment.is_sup_default = "0";
+                }
                 bll.Upload(payment);
             }
 

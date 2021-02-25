@@ -46,6 +46,7 @@
             this.myPanel1 = new IvyBack.cons.MyPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.txtvisa = new IvyBack.cons.MyTextBox();
+            this.myCheckBox1 = new IvyBack.cons.MyCheckBox();
             this.myPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -147,12 +148,23 @@
             this.txtvisa.Size = new System.Drawing.Size(253, 23);
             this.txtvisa.TabIndex = 10008;
             // 
+            // myCheckBox1
+            // 
+            this.myCheckBox1.Checked = false;
+            this.myCheckBox1.Location = new System.Drawing.Point(149, 275);
+            this.myCheckBox1.Name = "myCheckBox1";
+            this.myCheckBox1.Size = new System.Drawing.Size(225, 26);
+            this.myCheckBox1.TabIndex = 10009;
+            this.myCheckBox1.TabStop = false;
+            this.myCheckBox1.Text = "是否供应商默认结算方式";
+            // 
             // frmPaymentUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(524, 346);
+            this.Controls.Add(this.myCheckBox1);
             this.Controls.Add(this.txtvisa);
             this.Controls.Add(this.myPanel1);
             this.Controls.Add(this.label3);
@@ -182,5 +194,6 @@
 
         #endregion
 
+        private cons.MyCheckBox myCheckBox1;
     }
 }

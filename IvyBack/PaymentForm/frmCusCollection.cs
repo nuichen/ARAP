@@ -235,7 +235,15 @@ namespace IvyBack.VoucherForm
                 }
                 if (Helper.Conv.ToDecimal(txttotal_amount.Text.Trim()) == 0)
                 {
-                    throw new Exception("收款金额不能为0!");
+                    if (runType==1)
+                    {
+                        throw new Exception("收款金额不能为0!");
+                    }
+                    else
+                    {
+                        throw new Exception("付款金额不能为0!");
+                    }
+
                 }
                 //if (txtpay_way.Text.Trim().Contains("/") == false)
                 //{

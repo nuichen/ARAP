@@ -555,7 +555,15 @@ namespace IvyBack.VoucherForm
             foreach (DataRow row in rows)
             {
                 DataRow dataRow = dt_dgvc.NewRow();
-                dataRow["审核状态"] = row["approve_flag"].ToString();
+                if (row["approve_flag"].ToString()=="1")
+                {
+                    dataRow["审核状态"] = "已审核";
+                }
+                else
+                {
+                    dataRow["审核状态"] = "未审核";
+                }
+
                 dataRow["单据号"] = row["sheet_no"].ToString();
                 dataRow["供应商编号"] = row["cus_no"].ToString();
                 dataRow["供应商名称"] = row["cus_name"].ToString();
