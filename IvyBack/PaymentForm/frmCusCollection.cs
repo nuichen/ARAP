@@ -1315,8 +1315,38 @@ namespace IvyBack.VoucherForm
         public List<rp_t_collection_way> lr;
         private void txttotal_amount_Click(object sender, EventArgs e)
         {
+            DataTable table = new DataTable();
+            if (runType1 == 0 && flag == 0)
+            {
+                IBLL.IPayment payment = new BLL.PaymentBLL();
+                 table = payment.Getlist();
+            }
+            if (pay_dt==null)
+            {
+                pay_dt = new DataTable();
+                pay_dt.Columns.Add("pay_name");
+                pay_dt.Columns.Add("total_amount");
+                pay_dt.Rows.Add(pay_dt.NewRow());
+                if (table.Rows.Count>0)
+                {
+                    pay_dt.Rows[0]["pay_name"] = table.Rows[0]["pay_way"].ToString() + "/" + table.Rows[0]["pay_name"].ToString();
+                    pay_dt.Rows[0]["total_amount"] = this.label16.Text.ToString();
+                }
+
+            }
+            else
+            {
+                foreach (DataRow row in pay_dt.Rows)
+                {
+                    if (row["pay_name"].ToString()== table.Rows[0]["pay_way"].ToString() + "/" + table.Rows[0]["pay_name"].ToString())
+                    {
+                        row["total_amount"] = this.label16.Text.ToString();
+                    }
+                }
+            }
             decimal num=0.00m;
             var frm = new frmPaymentDetailed(pay_dt);
+
             //frm.runType = runType1;
             string visa_id;
             if(frm.ShowPayment(out pay_dt,out visa_id) == DialogResult.Yes)

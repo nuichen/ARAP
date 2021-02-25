@@ -17,6 +17,8 @@ namespace IvyBack.PaymentForm
         System.Data.DataTable tb_bank;
         public List<rp_t_collection_way> lr = new List<rp_t_collection_way>();
         public int runType = 1;//0供应商，1客户
+        public string pay_way = "";
+        public string amount = "";
         public frmPaymentDetailed(DataTable dt)
         {
             InitializeComponent();
@@ -37,6 +39,20 @@ namespace IvyBack.PaymentForm
                 for (int i = 0; i < 1; i++)
                 {
                     tb.Rows.Add(tb.NewRow());
+                }
+
+                editGrid1.DataSource = tb;
+            }
+            else if (dt.Rows.Count==0)
+            {
+                var tb = new DataTable();
+                tb.Columns.Add("pay_name");
+                tb.Columns.Add("total_amount");
+                tb.Rows.Add(tb.NewRow());
+                if (pay_way != "" && amount != "")
+                {
+                    tb.Rows[0]["pay_name"] = pay_way;
+                    tb.Rows[0]["total_amount"] = amount;
                 }
                 editGrid1.DataSource = tb;
             }
