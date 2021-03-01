@@ -422,12 +422,14 @@ namespace IvyBack.VoucherForm
                 txtSurplus.Text = "0.00";
                 txtCumulative.Text = "0.00";
                 txtThisSurplus.Text = "0.00";
+                this.label16.Text = "0.00";
 
                 //txtpay_way.GetDefaultValue();
                 //txtvisa.GetDefaultValue();
                 //
                 var tb = editGrid1.DataSource;
                 tb.Clear();
+                tb.NewRow();
                 //pay_dt = paymentbll.GetPaymentList();
                 editGrid1.Refresh();
 
@@ -1383,6 +1385,16 @@ namespace IvyBack.VoucherForm
             // {
             //     txtSurplus.Text = "0.00";
             // }
+            txttotal_amount.Text = "0.00";
+            txtfree_money.Text = "0.00";
+            if (pay_dt != null)
+                pay_dt.Clear();
+            txttotal_amount.Text = "0.00";
+            txtfree_money.Text = "0.00";
+            txtSurplus.Text = "0.00";
+            txtCumulative.Text = "0.00";
+            txtThisSurplus.Text = "0.00";
+            this.label16.Text = "0.00";
             var tb = editGrid1.DataSource;
             tb.Clear();
             editGrid1.Refresh();

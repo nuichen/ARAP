@@ -136,6 +136,7 @@
             this.label16.Size = new System.Drawing.Size(29, 12);
             this.label16.TabIndex = 15;
             this.label16.Text = "0.00";
+            this.label16.Visible = false;
             // 
             // button1
             // 
