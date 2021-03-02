@@ -252,6 +252,19 @@ namespace IvyBack.VoucherForm
                     }
 
                 }
+                decimal total = 0;
+                foreach (DataRow row1 in this.editGrid1.DataSource.Rows)
+                {
+                    if (row1["select_flag"].ToString()=="1")
+                    {
+                        total += row1["pay_amount"].ToDecimal();
+                    }
+                }
+                if (total>this.txttotal_amount.Text.ToDecimal())
+                {
+                    MsgForm.ShowFrom("单据中核销金额大于结算金额！");
+                    return;
+                }
                 //if (txtpay_way.Text.Trim().Contains("/") == false)
                 //{
                 //    throw new Exception("付款方式必填");
@@ -1334,7 +1347,7 @@ namespace IvyBack.VoucherForm
                     if (table.Rows.Count > 0)
                     {
                         pay_dt.Rows[0]["pay_name"] = table.Rows[0]["pay_way"].ToString() + "/" + table.Rows[0]["pay_name"].ToString();
-                        pay_dt.Rows[0]["total_amount"] = this.label16.Text.ToString();
+                        pay_dt.Rows[0]["total_amount"] = this.txttotal_amount.Text.ToString();
                     }
                 }
 
@@ -1348,7 +1361,7 @@ namespace IvyBack.VoucherForm
                     {
                         if (row["pay_name"].ToString() == table.Rows[0]["pay_way"].ToString() + "/" + table.Rows[0]["pay_name"].ToString())
                         {
-                            row["total_amount"] = this.label16.Text.ToString();
+                            row["total_amount"] = this.txttotal_amount.Text.ToString();
                         }
                     }
                 }
