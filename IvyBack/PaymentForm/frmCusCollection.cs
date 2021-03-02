@@ -1399,6 +1399,11 @@ namespace IvyBack.VoucherForm
             tb.Clear();
             editGrid1.Refresh();
             isAll = false;
+            if (pay_dt!=null)
+            {
+                pay_dt = null;
+            }
+            flag = 0;
         }
 
         public void SetCumulative()
